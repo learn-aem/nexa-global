@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="nexaglobal/components/page/homepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="Multi-region AEM foundation"
+                        title="Build once, operate by region, deliver with confidence."
+                        description="NexaGlobal gives regional teams a controlled AEM foundation for campaigns, corporate pages, and reusable content without fragmenting the platform."
+                        primaryCtaLabel="Explore capabilities"
+                        primaryCtaLink="#capabilities"
+                        secondaryCtaLabel="Talk to platform team"
+                        secondaryCtaLink="#contact"
+                        panelLabel="Foundation status"
+                        panelTitle="Milestone 1 in progress"
+                        panelText="Homepage, templates, header, footer, and authorable content are being established first so later localization and search work can build on stable page structure."/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="Operational clarity for regional teams"
+                        type="h2"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;capabilities&quot;>This local foundation is designed for a multi-region corporate rollout on AEM as a Cloud Service. It prioritizes clear page structure, reusable presentation, and a content model that can scale into language copies, approvals, search, and headless delivery.&lt;/p>&lt;p>Next implementation phases will add article templates, content fragment models, analytics configuration, and region-aware navigation.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+        </root>
+    </jcr:content>
+</jcr:root>

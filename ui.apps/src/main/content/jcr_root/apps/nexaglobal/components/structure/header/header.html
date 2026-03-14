@@ -1,0 +1,22 @@
+<sly
+    data-sly-set.homeLink="${properties.homeLink ? properties.homeLink : '/content/nexaglobal/us/en.html'}"
+    data-sly-set.brandTitle="${properties.brandTitle ? properties.brandTitle : (currentPage.pageTitle ? currentPage.pageTitle : (currentPage.title ? currentPage.title : 'NexaGlobal'))}"
+    data-sly-set.navLinkOne="${properties.navLinkOne ? properties.navLinkOne : '#overview'}"
+    data-sly-set.navLinkTwo="${properties.navLinkTwo ? properties.navLinkTwo : '#capabilities'}"
+    data-sly-set.navLinkThree="${properties.navLinkThree ? properties.navLinkThree : '#contact'}"
+    data-sly-set.ctaLink="${properties.ctaLink ? properties.ctaLink : '#contact'}"/>
+<header class="nexa-header">
+    <div class="nexa-shell nexa-header__inner">
+        <div class="nexa-header__brand">
+            <p class="nexa-header__eyebrow" data-sly-test="${properties.eyebrow}">${properties.eyebrow}</p>
+            <a class="nexa-header__title" href="${homeLink}">${brandTitle}</a>
+            <p class="nexa-header__tagline" data-sly-test="${properties.tagline}">${properties.tagline}</p>
+        </div>
+        <nav class="nexa-header__nav" aria-label="Primary">
+            <a class="nexa-header__link" data-sly-test="${properties.navLabelOne}" href="${navLinkOne}">${properties.navLabelOne}</a>
+            <a class="nexa-header__link" data-sly-test="${properties.navLabelTwo}" href="${navLinkTwo}">${properties.navLabelTwo}</a>
+            <a class="nexa-header__link" data-sly-test="${properties.navLabelThree}" href="${navLinkThree}">${properties.navLabelThree}</a>
+        </nav>
+        <a class="nexa-header__cta" data-sly-test="${properties.ctaLabel}" href="${ctaLink}">${properties.ctaLabel}</a>
+    </div>
+</header>

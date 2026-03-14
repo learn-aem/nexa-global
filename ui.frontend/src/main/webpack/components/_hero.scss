@@ -1,0 +1,106 @@
+.nexa-hero {
+    background: linear-gradient(135deg, #112a42 0%, #174d72 55%, #f2f6fb 55%, #f2f6fb 100%);
+    padding: 2rem 0 3rem;
+}
+
+.nexa-hero__inner {
+    align-items: stretch;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+}
+
+.nexa-hero__copy {
+    color: #f5f7fb;
+    padding: 2rem 0;
+}
+
+.nexa-hero__eyebrow {
+    color: #8db3d9;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+}
+
+.nexa-hero__title {
+    font-size: clamp(2.2rem, 4vw, 4.25rem);
+    line-height: 1.05;
+    margin: 0 0 1rem;
+    max-width: 12ch;
+}
+
+.nexa-hero__description {
+    color: #d7e4f0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 42rem;
+}
+
+.nexa-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.nexa-hero__primary,
+.nexa-hero__secondary {
+    border-radius: 999px;
+    font-weight: 700;
+    padding: 0.85rem 1.2rem;
+    text-decoration: none;
+}
+
+.nexa-hero__primary {
+    background: #f2b84b;
+    color: #10263a;
+}
+
+.nexa-hero__secondary {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #f5f7fb;
+}
+
+.nexa-hero__panel {
+    align-self: center;
+    background: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 24px 48px rgba(11, 31, 51, 0.14);
+    color: #10263a;
+    padding: 1.5rem;
+}
+
+.nexa-hero__panel-label {
+    color: #5f7994;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+}
+
+.nexa-hero__panel-title {
+    font-size: 1.4rem;
+    margin: 0 0 0.75rem;
+}
+
+.nexa-hero__panel-text {
+    color: #3a4f64;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .nexa-hero {
+        background: linear-gradient(180deg, #112a42 0%, #174d72 65%, #f2f6fb 65%, #f2f6fb 100%);
+    }
+
+    .nexa-hero__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .nexa-hero__copy {
+        padding-bottom: 0;
+    }
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="nexaglobal/components/page/homepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/header"
+                eyebrow="NexaGlobal"
+                brandTitle="NexaGlobal"
+                tagline="AEM foundation for multi-region enterprise delivery"
+                homeLink="/content/nexaglobal/us/en"
+                navLabelOne="Overview"
+                navLinkOne="#overview"
+                navLabelTwo="Capabilities"
+                navLinkTwo="#capabilities"
+                navLabelThree="Contact"
+                navLinkThree="#contact"
+                ctaLabel="Request demo"
+                ctaLink="#contact"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    editable="{Boolean}true"
+                    layout="responsiveGrid"/>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/footer"
+                eyebrow="Platform operations"
+                title="Keep the enterprise model centralized while regional teams move faster."
+                text="Use this foundation to prove page composition, template governance, and reusable shell components before introducing localization, search, and content fragments."
+                linkLabelOne="Architecture"
+                linkUrlOne="#overview"
+                linkLabelTwo="Capabilities"
+                linkUrlTwo="#capabilities"
+                linkLabelThree="Contact"
+                linkUrlThree="#contact"
+                copyright="Copyright NexaGlobal. Local foundation build for architecture validation."/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

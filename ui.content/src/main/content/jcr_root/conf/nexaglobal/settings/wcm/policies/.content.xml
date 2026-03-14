@@ -304,7 +304,38 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1575040440977>
+                <policy_foundation_main
+                    cq:styleDefaultElement="section"
+                    jcr:description="Allows the homepage authors to compose the initial NexaGlobal foundation using approved content components."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Foundation Main Content"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:NexaGlobal - Content,/apps/nexaglobal/components/title,/apps/nexaglobal/components/text,/apps/nexaglobal/components/image,/apps/nexaglobal/components/teaser,/apps/nexaglobal/components/button]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_foundation_main>
             </container>
+            <structure jcr:primaryType="nt:unstructured">
+                <header
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Foundation Header"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </header>
+                <footer
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Foundation Footer"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </footer>
+            </structure>
+            <content jcr:primaryType="nt:unstructured">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Foundation Hero"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </hero>
+            </content>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
                     jcr:description="Sets the title size to H3."
