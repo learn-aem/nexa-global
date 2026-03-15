@@ -1,0 +1,23 @@
+<sly
+    data-sly-set.heroTitle="${properties.title ? properties.title : (currentPage.pageTitle ? currentPage.pageTitle : currentPage.title)}"
+    data-sly-set.primaryCtaLink="${properties.primaryCtaLink ? properties.primaryCtaLink : '#capabilities'}"
+    data-sly-set.secondaryCtaLink="${properties.secondaryCtaLink ? properties.secondaryCtaLink : '#contact'}"
+    data-sly-set.panelTitle="${properties.panelTitle ? properties.panelTitle : 'Global platform foundation'}"/>
+<section class="nexa-hero" id="overview">
+    <div class="nexa-shell nexa-hero__inner">
+        <div class="nexa-hero__copy">
+            <p class="nexa-hero__eyebrow" data-sly-test="${properties.eyebrow}">${properties.eyebrow}</p>
+            <h1 class="nexa-hero__title">${heroTitle}</h1>
+            <p class="nexa-hero__description" data-sly-test="${properties.description}">${properties.description}</p>
+            <div class="nexa-hero__actions">
+                <a class="nexa-hero__primary" data-sly-test="${properties.primaryCtaLabel}" href="${primaryCtaLink}">${properties.primaryCtaLabel}</a>
+                <a class="nexa-hero__secondary" data-sly-test="${properties.secondaryCtaLabel}" href="${secondaryCtaLink}">${properties.secondaryCtaLabel}</a>
+            </div>
+        </div>
+        <div class="nexa-hero__panel">
+            <p class="nexa-hero__panel-label" data-sly-test="${properties.panelLabel}">${properties.panelLabel}</p>
+            <h2 class="nexa-hero__panel-title">${panelTitle}</h2>
+            <p class="nexa-hero__panel-text" data-sly-test="${properties.panelText}">${properties.panelText}</p>
+        </div>
+    </div>
+</section>

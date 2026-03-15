@@ -1,0 +1,60 @@
+.nexa-footer {
+    background: #10263a;
+    color: #f5f7fb;
+    margin-top: 3rem;
+    padding: 2.5rem 0 1.5rem;
+}
+
+.nexa-footer__inner,
+.nexa-footer__meta {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.nexa-footer__summary {
+    max-width: 42rem;
+}
+
+.nexa-footer__eyebrow {
+    color: #8db3d9;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+}
+
+.nexa-footer__title {
+    font-size: 1.8rem;
+    margin: 0 0 0.75rem;
+}
+
+.nexa-footer__text,
+.nexa-footer__copyright {
+    color: #c3d4e6;
+    margin: 0;
+}
+
+.nexa-footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.nexa-footer__link {
+    color: #f5f7fb;
+    text-decoration: none;
+}
+
+.nexa-footer__meta {
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .nexa-footer__inner,
+    .nexa-footer__meta {
+        flex-direction: column;
+    }
+}
