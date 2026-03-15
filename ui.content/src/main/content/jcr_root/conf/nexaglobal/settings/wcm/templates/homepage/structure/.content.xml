@@ -25,6 +25,11 @@
                 navLinkThree="#contact"
                 ctaLabel="Request demo"
                 ctaLink="#contact"/>
+            <breadcrumb
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/breadcrumb"
+                hideCurrent="{Boolean}false"
+                startLevel="{Long}3"/>
             <main
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexaglobal/components/container"

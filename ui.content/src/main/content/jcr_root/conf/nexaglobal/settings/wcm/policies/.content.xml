@@ -336,6 +336,15 @@
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </hero>
             </content>
+            <breadcrumb jcr:primaryType="nt:unstructured">
+                <policy_default
+                    jcr:description="Provides the default breadcrumb behavior for NexaGlobal templates."
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Default Breadcrumb"
+                    sling:resourceType="wcm/core/components/policy/policy">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_default>
+            </breadcrumb>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
                     jcr:description="Sets the title size to H3."

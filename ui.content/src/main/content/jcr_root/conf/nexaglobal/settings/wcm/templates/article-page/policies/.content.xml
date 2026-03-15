@@ -13,6 +13,10 @@
                 cq:policy="nexaglobal/components/structure/header"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/core/components/policies/mapping"/>
+            <breadcrumb
+                cq:policy="nexaglobal/components/breadcrumb/policy_default"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
             <main
                 cq:policy="nexaglobal/components/container/policy_649128221558427"
                 jcr:primaryType="nt:unstructured"
