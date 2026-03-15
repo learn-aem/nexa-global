@@ -13,19 +13,8 @@
             layout="responsiveGrid">
             <header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/structure/header"
-                eyebrow="NexaGlobal"
-                brandTitle="NexaGlobal"
-                tagline="English blueprint for regional rollout"
-                homeLink="/content/nexaglobal/language-masters/en"
-                navLabelOne="Homepage"
-                navLinkOne="/content/nexaglobal/language-masters/en.html"
-                navLabelTwo="Articles"
-                navLinkTwo="/content/nexaglobal/language-masters/en/articles.html"
-                navLabelThree="About Me"
-                navLinkThree="/content/nexaglobal/language-masters/en/about-me.html"
-                ctaLabel="Chat on WhatsApp"
-                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/en/site/header/master"/>
             <main
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexaglobal/components/container"
@@ -54,17 +43,8 @@
             </main>
             <footer
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/structure/footer"
-                eyebrow="Blueprint governance"
-                title="Teach the model before the tooling."
-                text="AEM learners make faster progress when they understand how the repository, templates, and components work together before diving into implementation details."
-                linkLabelOne="Homepage"
-                linkUrlOne="/content/nexaglobal/language-masters/en.html"
-                linkLabelTwo="Articles"
-                linkUrlTwo="/content/nexaglobal/language-masters/en/articles.html"
-                linkLabelThree="About Me"
-                linkUrlThree="/content/nexaglobal/language-masters/en/about-me.html"
-                copyright="Copyright NexaGlobal. English learning blueprint."/>
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/en/site/footer/master"/>
         </root>
     </jcr:content>
 </jcr:root>

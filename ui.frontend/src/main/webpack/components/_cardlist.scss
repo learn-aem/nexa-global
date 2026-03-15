@@ -1,5 +1,10 @@
 .nexa-cardlist {
     padding: 3rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .nexa-cardlist__heading {
@@ -10,9 +15,11 @@
 }
 
 .nexa-cardlist__grid {
-    display: grid;
+    display: grid !important;
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    float: none !important;
 }
 
 .nexa-cardlist__card {
@@ -21,6 +28,8 @@
     border-radius: 12px;
     overflow: hidden;
     transition: box-shadow 0.3s ease, transform 0.2s ease;
+    width: 100% !important;
+    float: none !important;
 
     &:hover {
         box-shadow: 0 12px 32px rgba(17, 42, 66, 0.1);

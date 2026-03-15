@@ -10,7 +10,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/core/components/policies/mapping">
             <header
-                cq:policy="nexaglobal/components/structure/header"
+                cq:policy="nexaglobal/components/experiencefragment/default"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/core/components/policies/mapping"/>
             <breadcrumb
@@ -44,7 +44,7 @@
                 </content>
             </main>
             <footer
-                cq:policy="nexaglobal/components/structure/footer"
+                cq:policy="nexaglobal/components/experiencefragment/default"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/core/components/policies/mapping"/>
         </root>

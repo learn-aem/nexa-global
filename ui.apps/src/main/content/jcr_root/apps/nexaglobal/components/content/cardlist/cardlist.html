@@ -2,7 +2,7 @@
 <section class="nexa-cardlist" data-sly-test="${model.cards && model.cards.size > 0}">
     <h2 class="nexa-cardlist__heading" data-sly-test="${properties.heading}">${properties.heading}</h2>
     <div class="nexa-cardlist__grid">
-        <div class="nexa-cardlist__card" data-sly-list.card="${model.cards}">
+        <div class="nexa-cardlist__card" data-sly-repeat.card="${model.cards}">
             <div class="nexa-cardlist__image" data-sly-test="${card.imagePath}">
                 <img src="${card.imagePath}" alt="${card.title}" loading="lazy"/>
             </div>

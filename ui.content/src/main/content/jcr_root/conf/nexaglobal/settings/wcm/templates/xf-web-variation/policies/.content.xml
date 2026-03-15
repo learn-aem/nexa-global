@@ -11,6 +11,14 @@
             sling:resourceType="wcm/core/components/policies/mapping">
             <mysite jcr:primaryType="nt:unstructured">
                 <components jcr:primaryType="nt:unstructured">
+                    <content_header
+                        cq:policy="nexaglobal/components/structure/header"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/core/components/policies/mapping"/>
+                    <content_footer
+                        cq:policy="nexaglobal/components/structure/footer"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/core/components/policies/mapping"/>
                     <title
                         cq:policy="nexaglobal/components/title/policy_641528232375303"
                         jcr:primaryType="nt:unstructured"
