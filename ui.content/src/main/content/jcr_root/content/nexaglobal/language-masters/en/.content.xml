@@ -23,10 +23,10 @@
                 navLinkOne="#overview"
                 navLabelTwo="Capabilities"
                 navLinkTwo="#capabilities"
-                navLabelThree="Contact"
-                navLinkThree="#contact"
-                ctaLabel="Review blueprint"
-                ctaLink="#contact"/>
+                navLabelThree="About Me"
+                navLinkThree="/content/nexaglobal/language-masters/en/about-me.html"
+                ctaLabel="Chat on WhatsApp"
+                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
             <main
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexaglobal/components/container"
@@ -70,8 +70,8 @@
                 linkUrlOne="#overview"
                 linkLabelTwo="Capabilities"
                 linkUrlTwo="#capabilities"
-                linkLabelThree="Contact"
-                linkUrlThree="#contact"
+                linkLabelThree="About Me"
+                linkUrlThree="/content/nexaglobal/language-masters/en/about-me.html"
                 copyright="Copyright NexaGlobal. English blueprint foundation."/>
         </root>
     </jcr:content>
