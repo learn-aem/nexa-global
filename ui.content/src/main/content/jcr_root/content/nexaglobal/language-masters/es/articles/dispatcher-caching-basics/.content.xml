@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        pageTitle="Fundamentos de Dispatcher y Caché"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Fundamentos de Dispatcher y Caché"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/article-page"
+        sling:resourceType="nexaglobal/components/page/articlepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/es/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="Capa de entrega"
+                        title="Fundamentos de Dispatcher y caché"
+                        description="Este artículo ayuda a los estudiantes a comprender por qué una página puede verse diferente en autor, publicación y dispatcher, y cómo el caché cambia el flujo de depuración."
+                        primaryCtaLabel="Volver a artículos"
+                        primaryCtaLink="/content/nexaglobal/language-masters/es/articles.html"
+                        panelLabel="Objetivo de aprendizaje"
+                        panelTitle="Separar problemas de origen de problemas de caché"
+                        panelText="El estudiante debería poder decidir si un problema pertenece al contenido creado, al renderizado de publicación o a la capa de caché."/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>Dispatcher se ubica frente a AEM publish y almacena en caché las respuestas para que la plataforma pueda servir contenido de manera rápida y consistente a escala. Esto significa que lo primero que hay que preguntar durante la depuración es si la respuesta viene de AEM o del caché.&lt;/p>&lt;p>Para los estudiantes, el hábito práctico es simple: validar la página en autor, luego en publicación, luego en dispatcher. Si el contenido es correcto en autor pero obsoleto en publicación o dispatcher, el problema generalmente es la activación, la invalidación o una regla de caché, no la lógica del componente.&lt;/p>&lt;p>Una vez que esta mentalidad está clara, los estudiantes pueden abordar las reglas de flush, filtros, encabezados y patrones de invalidación sin tratar al dispatcher como una caja negra.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/es/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

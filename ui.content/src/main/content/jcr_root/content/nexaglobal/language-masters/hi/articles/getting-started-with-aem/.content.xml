@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        pageTitle="AEM के साथ शुरुआत करें"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AEM के साथ शुरुआत करें"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/article-page"
+        sling:resourceType="nexaglobal/components/page/articlepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/hi/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="प्रारंभिक मार्गदर्शिका"
+                        title="AEM Sites के साथ शुरुआत करें"
+                        description="यह लेख नए शिक्षार्थियों को AEM का पहला व्यावहारिक मानसिक मॉडल देता है: author और publish, JCR कंटेंट, templates, components, और पेज संरचना क्यों महत्वपूर्ण है।"
+                        primaryCtaLabel="लेखों पर वापस जाएँ"
+                        primaryCtaLink="/content/nexaglobal/language-masters/hi/articles.html"
+                        panelLabel="सीखने का लक्ष्य"
+                        panelTitle="बिल्डिंग ब्लॉक्स को समझें"
+                        panelText="इस पेज को पढ़ने के बाद, शिक्षार्थी को यह समझा पाना चाहिए कि पेज, templates, components और लिखित सामग्री एक साथ कैसे काम करते हैं।"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>AEM Sites केवल एक पेज एडिटर नहीं है। यह एक कंटेंट प्लेटफ़ॉर्म है जहाँ पेज परिभाषाएँ, पुन: प्रयोज्य कंपोनेंट्स और रिपॉज़िटरी कंटेंट मिलकर लेखकों और अंतिम उपयोगकर्ताओं को एक सुसंगत साइट प्रदान करते हैं।&lt;/p>&lt;p>सबसे पहले चिंताओं के पृथक्करण को समझें: templates पुन: प्रयोज्य पेज शेल को परिभाषित करते हैं, components कंटेंट के व्यक्तिगत टुकड़ों को रेंडर करते हैं, और लिखित पेज उन वास्तविक मानों को संग्रहीत करते हैं जिन्हें लेखक समय के साथ बनाए रखते हैं।&lt;/p>&lt;p>जब शिक्षार्थी इस मॉडल को शुरू में ही समझ लेते हैं, तो Editable Templates, Sling Models, dialogs, clientlibs और Dispatcher जैसे विषय समझने में आसान हो जाते हैं क्योंकि प्रत्येक अवधारणा का डिलीवरी स्टैक में एक स्पष्ट स्थान होता है।&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/hi/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        pageTitle="Les bases du Dispatcher et de la mise en cache"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Les bases du Dispatcher et de la mise en cache"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/article-page"
+        sling:resourceType="nexaglobal/components/page/articlepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/fr/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="Couche de diffusion"
+                        title="Les bases du Dispatcher et de la mise en cache"
+                        description="Cet article aide les apprenants à comprendre pourquoi une page peut apparaître différemment sur l'auteur, la publication et le Dispatcher, et comment la mise en cache modifie le processus de débogage."
+                        primaryCtaLabel="Retour aux articles"
+                        primaryCtaLink="/content/nexaglobal/language-masters/fr/articles.html"
+                        panelLabel="Objectif d'apprentissage"
+                        panelTitle="Distinguer les problèmes d'origine des problèmes de cache"
+                        panelText="Un apprenant devrait être capable de déterminer si un problème provient du contenu créé par l'auteur, du rendu de publication ou de la couche de mise en cache."/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>Le Dispatcher se place devant l'instance de publication AEM et met en cache les réponses afin que la plateforme puisse servir le contenu rapidement et de manière cohérente à grande échelle. Cela signifie que la première question à se poser lors du débogage est de savoir si la réponse provient d'AEM ou du cache.&lt;/p>&lt;p>Pour les apprenants, la bonne habitude est simple : validez la page sur l'auteur, puis sur la publication, puis sur le Dispatcher. Si le contenu est correct sur l'auteur mais obsolète sur la publication ou le Dispatcher, le problème est généralement lié à l'activation, l'invalidation ou une règle de cache plutôt qu'à la logique du composant.&lt;/p>&lt;p>Une fois cet état d'esprit acquis, les apprenants peuvent aborder les règles de purge, les filtres, les en-têtes et les modèles d'invalidation sans considérer le Dispatcher comme une boîte noire.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/fr/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

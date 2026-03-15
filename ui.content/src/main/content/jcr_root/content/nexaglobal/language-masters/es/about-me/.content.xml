@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
+        pageTitle="Acerca de Mí"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Acerca de Mí"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/content-page"
+        sling:resourceType="nexaglobal/components/page/contentpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/es/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <titleIntro
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Acerca de Hemanth Chowdary Para"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h1"/>
+                    <textIntro
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>Soy un Desarrollador AEM con sede en Hyderabad con más de 4 años de experiencia práctica construyendo y dando soporte a plataformas web empresariales en AEM 6.5 y AEM as a Cloud Service. Mi trabajo se centra en el desarrollo backend de AEM, incluyendo Sling Models, servicios OSGi, Servlets, Sling Schedulers, operaciones de contenido basadas en Groovy e integraciones con API REST.&lt;/p>&lt;p>He contribuido a programas empresariales para LSEG, Royal Caribbean, Agilent Technologies y otras plataformas digitales a gran escala donde la confiabilidad, el soporte de producción y el diseño backend mantenible son fundamentales.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <titleSkills
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Experiencia principal en AEM"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h2"/>
+                    <textSkills
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>Mi conjunto principal de habilidades en AEM incluye AEM 6.5, AEM as a Cloud Service, componentes AEM, plantillas editables, HTL, Sling Models, Sling Servlets, OSGi, JCR/CRX, Content Fragments, Experience Fragments, DAM, Dynamic Media, AEM Cloud Manager y gestión de usuarios y grupos.&lt;/p>&lt;p>Más allá de AEM, trabajo con Java, Groovy, HTML, CSS, JavaScript, Maven, Git, GitHub, Jenkins, DXone, SonarQube, IntelliJ IDEA, Postman, Jira y Confluence. Mi modelo de entrega está alineado con equipos Agile y respaldado por JUnit y AEM Mocks para pruebas.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <titleExperience
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Aspectos destacados de experiencia"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h2"/>
+                    <textExperience
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>En Deloitte, he dado soporte a Agilent Technologies y Royal Caribbean en entornos AEM 6.5 y AEMaaCS, manejando soporte de producción, despliegues, resolución de incidentes, RCA, Sling Models, configuraciones OSGi, Servlets, solución de problemas de DAM, flujos de lanzamiento en Cloud Manager, migración de Dynamic Media y habilitación de contenido multilingüe.&lt;/p>&lt;p>Antes de Deloitte, trabajé en Tata Consultancy Services en la plataforma del London Stock Exchange Group, donde construí Sling Servlets personalizados, Sling Models, servicios OSGi, scripts Groovy para operaciones JCR masivas, cobertura JUnit con AEM Mocks y flujos de validación de API usando Postman. También di soporte a la consistencia de autoría, pipelines de despliegue y análisis de problemas de producción usando logs de AEM.&lt;/p>&lt;p>Mi formación está respaldada por un título de Licenciatura en Tecnología, la certificación Adobe Experience Manager Sites Developer Professional (AD0-E123) y reconocimiento por excelencia técnica y colaboración en equipo en lanzamientos críticos.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/es/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

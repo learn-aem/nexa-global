@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:tags="[]"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Footer"
+        sling:resourceType="nexaglobal/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="simple">
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/footer"
+                eyebrow="AEM शिक्षण केंद्र"
+                title="निर्माण करते रहें। सीखते रहें।"
+                text="यह साइट AEM as a Cloud Service पर बनाई गई एक ओपन लर्निंग प्रोजेक्ट है। सोर्स कोड का अन्वेषण करें, पैटर्न का अध्ययन करें, और इसे अपने AEM प्रोजेक्ट्स के लिए संदर्भ के रूप में उपयोग करें।"
+                linkLabelOne="ट्यूटोरियल"
+                linkUrlOne="#tutorials"
+                linkLabelTwo="मूल अवधारणाएँ"
+                linkUrlTwo="#concepts"
+                linkLabelThree="मेरे बारे में"
+                linkUrlThree="/content/nexaglobal/language-masters/hi/about-me.html"
+                copyright="NexaGlobal द्वारा AEM सीखें। AEM as a Cloud Service के साथ निर्मित।"/>
+        </root>
+    </jcr:content>
+</jcr:root>

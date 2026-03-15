@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        pageTitle="Débuter avec AEM"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Débuter avec AEM"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/article-page"
+        sling:resourceType="nexaglobal/components/page/articlepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/fr/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="Guide de démarrage"
+                        title="Débuter avec AEM Sites"
+                        description="Cet article offre aux nouveaux apprenants un premier modèle mental pratique d'AEM : auteur et publication, contenu JCR, templates, composants, et pourquoi la structure des pages est importante."
+                        primaryCtaLabel="Retour aux articles"
+                        primaryCtaLink="/content/nexaglobal/language-masters/fr/articles.html"
+                        panelLabel="Objectif d'apprentissage"
+                        panelTitle="Comprendre les éléments constitutifs"
+                        panelText="Après avoir lu cette page, un apprenant devrait être capable d'expliquer comment les pages, les templates, les composants et le contenu créé par les auteurs s'articulent ensemble."/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>AEM Sites n'est pas simplement un éditeur de pages. C'est une plateforme de contenu où les définitions de pages, les composants réutilisables et le contenu du référentiel travaillent ensemble pour offrir un site cohérent aux auteurs et aux utilisateurs finaux.&lt;/p>&lt;p>Commencez par comprendre la séparation des responsabilités : les templates définissent la structure réutilisable de la page, les composants affichent les éléments de contenu individuels, et les pages créées par les auteurs stockent les valeurs réelles que ceux-ci maintiennent au fil du temps.&lt;/p>&lt;p>Lorsque les apprenants comprennent ce modèle tôt, des sujets comme les Editable Templates, les Sling Models, les boîtes de dialogue, les clientlibs et le Dispatcher deviennent plus faciles à appréhender, car chaque concept a une place claire dans la pile de diffusion.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/fr/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>
