@@ -1,0 +1,73 @@
+.nexa-articlelist {
+    padding: 3rem 0;
+}
+
+.nexa-articlelist__heading {
+    color: #112a42;
+    font-size: 2rem;
+    margin: 0 0 2rem;
+    text-align: center;
+}
+
+.nexa-articlelist__grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.nexa-articlelist__item {
+    background: #fff;
+    border: 1px solid #e8ecf1;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 8px 24px rgba(17, 42, 66, 0.08);
+    }
+}
+
+.nexa-articlelist__date {
+    color: #8db3d9;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+}
+
+.nexa-articlelist__title {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+
+    a {
+        color: #112a42;
+        text-decoration: none;
+
+        &:hover {
+            color: #174d72;
+        }
+    }
+}
+
+.nexa-articlelist__description {
+    color: #5f7994;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1rem;
+}
+
+.nexa-articlelist__link {
+    color: #174d72;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+        color: #f2b84b;
+    }
+}
+
+.nexa-articlelist--empty {
+    color: #5f7994;
+    font-style: italic;
+    text-align: center;
+}

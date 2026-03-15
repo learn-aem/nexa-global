@@ -1,0 +1,19 @@
+<sly data-sly-use.model="com.nexaglobal.core.models.ArticleListModel"/>
+<section class="nexa-articlelist" data-sly-test="${model.articles && model.articles.size > 0}">
+    <h2 class="nexa-articlelist__heading" data-sly-test="${properties.heading}">${properties.heading}</h2>
+    <div class="nexa-articlelist__grid">
+        <article class="nexa-articlelist__item" data-sly-list.article="${model.articles}">
+            <div class="nexa-articlelist__content">
+                <p class="nexa-articlelist__date" data-sly-test="${article.lastModified}">${article.lastModified}</p>
+                <h3 class="nexa-articlelist__title">
+                    <a href="${article.path @ extension='html'}">${article.title}</a>
+                </h3>
+                <p class="nexa-articlelist__description" data-sly-test="${article.description}">${article.description}</p>
+                <a class="nexa-articlelist__link" href="${article.path @ extension='html'}">Read article</a>
+            </div>
+        </article>
+    </div>
+</section>
+<div class="nexa-articlelist nexa-articlelist--empty" data-sly-test="${!model.articles || model.articles.size == 0}">
+    <p>No articles found. Configure a parent path in the component dialog.</p>
+</div>

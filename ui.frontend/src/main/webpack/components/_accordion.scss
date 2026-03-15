@@ -1,10 +1,64 @@
-.cmp-accordion {}
-.cmp-accordion__item {}
+.cmp-accordion {
+    border: 1px solid #e8ecf1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cmp-accordion__item {
+    border-bottom: 1px solid #e8ecf1;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
 .cmp-accordion__header {}
-.cmp-accordion__button {}
-.cmp-accordion__button--expanded {}
+
+.cmp-accordion__button {
+    align-items: center;
+    background: #fff;
+    border: none;
+    color: #112a42;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 0.75rem;
+    justify-content: space-between;
+    padding: 1.15rem 1.5rem;
+    text-align: left;
+    transition: background 0.2s;
+    width: 100%;
+
+    &:hover {
+        background: #f8f9fb;
+    }
+}
+
+.cmp-accordion__button--expanded {
+    background: #f8f9fb;
+}
+
 .cmp-accordion__title {}
-.cmp-accordion__icon {}
-.cmp-accordion__panel {}
-.cmp-accordion__panel--expanded {}
-.cmp-accordion__panel--hidden {}
+
+.cmp-accordion__icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.cmp-accordion__button--expanded .cmp-accordion__icon {
+    transform: rotate(180deg);
+}
+
+.cmp-accordion__panel {
+    background: #fafbfc;
+    padding: 0 1.5rem 1.25rem;
+}
+
+.cmp-accordion__panel--expanded {
+    display: block;
+}
+
+.cmp-accordion__panel--hidden {
+    display: none;
+}

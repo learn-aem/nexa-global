@@ -1,6 +1,45 @@
-.cmp-tabs {}
-.cmp-tabs__tablist {}
-.cmp-tabs__tab {}
-.cmp-tabs__tab--active {}
-.cmp-tabs__tabpanel {}
-.cmp-tabs__tabpanel--active {}
+.cmp-tabs {
+    margin: 1.5rem 0;
+}
+
+.cmp-tabs__tablist {
+    border-bottom: 2px solid #e8ecf1;
+    display: flex;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0;
+}
+
+.cmp-tabs__tab {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #5f7994;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: -2px;
+    padding: 0.85rem 1.25rem;
+    transition: color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+
+    &:hover {
+        color: #112a42;
+    }
+}
+
+.cmp-tabs__tab--active {
+    border-bottom-color: #f2b84b;
+    color: #112a42;
+    font-weight: 700;
+}
+
+.cmp-tabs__tabpanel {
+    padding: 1.5rem 0.5rem;
+}
+
+.cmp-tabs__tabpanel--active {
+    display: block;
+}

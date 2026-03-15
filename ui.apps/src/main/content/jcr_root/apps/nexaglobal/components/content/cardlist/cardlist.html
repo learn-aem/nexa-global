@@ -1,0 +1,19 @@
+<sly data-sly-use.model="com.nexaglobal.core.models.CardListModel"/>
+<section class="nexa-cardlist" data-sly-test="${model.cards && model.cards.size > 0}">
+    <h2 class="nexa-cardlist__heading" data-sly-test="${properties.heading}">${properties.heading}</h2>
+    <div class="nexa-cardlist__grid">
+        <div class="nexa-cardlist__card" data-sly-list.card="${model.cards}">
+            <div class="nexa-cardlist__image" data-sly-test="${card.imagePath}">
+                <img src="${card.imagePath}" alt="${card.title}" loading="lazy"/>
+            </div>
+            <div class="nexa-cardlist__content">
+                <h3 class="nexa-cardlist__title">${card.title}</h3>
+                <p class="nexa-cardlist__description" data-sly-test="${card.description}">${card.description}</p>
+                <a class="nexa-cardlist__link" data-sly-test="${card.linkUrl}" href="${card.linkUrl @ extension='html'}">${card.linkLabel || 'Learn more'}</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="nexa-cardlist nexa-cardlist--empty" data-sly-test="${!model.cards || model.cards.size == 0}">
+    <p>Add cards using the component dialog.</p>
+</div>
