@@ -20,25 +20,25 @@
                     <hero
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/content/hero"
-                        eyebrow="Multi-region AEM foundation"
-                        title="Build once, operate by region, deliver with confidence."
-                        description="NexaGlobal gives regional teams a controlled AEM foundation for campaigns, corporate pages, and reusable content without fragmenting the platform."
-                        primaryCtaLabel="Explore capabilities"
+                        eyebrow="Enterprise digital platform"
+                        title="Deliver consistent corporate experiences across regions without losing local control."
+                        description="Use this homepage template to introduce the business mission, highlight platform capabilities, and route users into the most important journeys for a region, business unit, or market launch."
+                        primaryCtaLabel="Review platform scope"
                         primaryCtaLink="#capabilities"
-                        secondaryCtaLabel="Talk to platform team"
+                        secondaryCtaLabel="Contact the delivery team"
                         secondaryCtaLink="#contact"
-                        panelLabel="Foundation status"
-                        panelTitle="Milestone 1 in progress"
-                        panelText="Homepage, templates, header, footer, and authorable content are being established first so later localization and search work can build on stable page structure."/>
+                        panelLabel="Recommended use"
+                        panelTitle="Corporate homepage or regional landing page"
+                        panelText="Start with business outcomes, trust signals, and primary journeys. Expand later with localization, search, analytics, and campaign-driven content."/>
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/title"
-                        jcr:title="Operational clarity for regional teams"
+                        jcr:title="What this page should communicate"
                         type="h2"/>
                     <text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/text"
-                        text="&lt;p id=&quot;capabilities&quot;>This local foundation is designed for a multi-region corporate rollout on AEM as a Cloud Service. It prioritizes clear page structure, reusable presentation, and a content model that can scale into language copies, approvals, search, and headless delivery.&lt;/p>&lt;p>Next implementation phases will add article templates, content fragment models, analytics configuration, and region-aware navigation.&lt;/p>"
+                        text="&lt;p id=&quot;capabilities&quot;>Summarize the business proposition in plain language, then direct visitors to the most important programs, services, or regional priorities. A strong enterprise homepage should balance executive messaging, operational trust, and clear calls to action.&lt;/p>&lt;p>Recommended next edits: update the hero to match the owning business unit, replace this section with capability highlights or trust indicators, and connect the footer links to real corporate destinations.&lt;/p>&lt;p id=&quot;contact&quot;>This template is intended to evolve into a regionalized experience backed by governance, analytics, and reusable content models rather than one-off authored pages.&lt;/p>"
                         textIsRich="{Boolean}true"/>
                 </content>
             </main>

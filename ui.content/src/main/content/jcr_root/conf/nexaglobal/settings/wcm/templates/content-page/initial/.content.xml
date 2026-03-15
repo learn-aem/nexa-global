@@ -19,12 +19,12 @@
                     layout="responsiveGrid">
                     <title
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Regional content page"
+                        jcr:title="Business capability overview"
                         sling:resourceType="nexaglobal/components/title"
                         type="h1"/>
                     <text
                         jcr:primaryType="nt:unstructured"
-                        text="&lt;p>Use this template for evergreen corporate content, business capability pages, or regional landing pages that do not need article metadata.&lt;/p>"
+                        text="&lt;p>Use this template for evergreen enterprise content such as service overviews, operating model pages, compliance summaries, regional program information, or internal capability descriptions.&lt;/p>&lt;p>Start with a concise business summary, then explain ownership, scope, customer or employee impact, and the next action the visitor should take. Keep the structure stable so the page can be reused across regions without redesign.&lt;/p>&lt;p>Recommended next edits: replace this copy with the actual business narrative, add supporting sections or media below, and keep the breadcrumb and page title aligned with the information architecture.&lt;/p>"
                         sling:resourceType="nexaglobal/components/text"
                         textIsRich="{Boolean}true"/>
                 </content>

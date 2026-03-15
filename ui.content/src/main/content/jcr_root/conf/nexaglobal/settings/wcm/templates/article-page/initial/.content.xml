@@ -20,17 +20,17 @@
                     <hero
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/content/hero"
-                        eyebrow="Insight article"
-                        title="Article headline goes here"
-                        description="Use this article page for editorial, newsroom, or thought leadership content with a stronger opening section."
-                        primaryCtaLabel="Back to homepage"
+                        eyebrow="Executive insight or newsroom story"
+                        title="Use a clear headline that states the announcement, perspective, or business update."
+                        description="This template is for authored stories, leadership perspectives, press-style updates, and editorial content that needs a stronger opening section than a standard information page."
+                        primaryCtaLabel="Return to homepage"
                         primaryCtaLink="/content/nexaglobal/us/en.html"
-                        panelLabel="Article format"
-                        panelTitle="Foundation article template"
-                        panelText="This template gives editorial pages a stronger hero treatment while reusing the same global structure components."/>
+                        panelLabel="Editorial guidance"
+                        panelTitle="Lead with context and business relevance"
+                        panelText="State why the update matters, who it affects, and what action or perspective the reader should take away."/>
                     <text
                         jcr:primaryType="nt:unstructured"
-                        text="&lt;p>Replace this sample copy with authored article content or future Content Fragment-driven article rendering.&lt;/p>"
+                        text="&lt;p>Open the article with a short summary that establishes the topic, the audience, and the reason this update is important now.&lt;/p>&lt;p>Then structure the body for clarity: background, key details, supporting evidence, and a closing section that points readers to related content or follow-up actions.&lt;/p>&lt;p>This starter content should be replaced during authoring, but it is intentionally informative so editors understand the expected structure before deeper workflow and structured-content integrations are added.&lt;/p>"
                         sling:resourceType="nexaglobal/components/text"
                         textIsRich="{Boolean}true"/>
                 </content>
