@@ -13,22 +13,21 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="nexaglobal/components/container"
             layout="simple">
-            <navigation
+            <header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/navigation"
-                collectAllPages="false"
-                navigationRoot="/content/nexaglobal/us/en"
-                skipNavigationRoot="false"
-                structureDepth="1"/>
-            <languagenavigation
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/languagenavigation"
-                navigationRoot="/content/nexaglobal/us"
-                structureDepth="2"/>
-            <search
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/search"
-                searchRoot="/content/nexaglobal/us"/>
+                sling:resourceType="nexaglobal/components/structure/header"
+                eyebrow="AEM Learning Hub"
+                brandTitle="Learn AEM"
+                tagline="Master Adobe Experience Manager from zero to production"
+                homeLink="/content/nexaglobal/us/en"
+                navLabelOne="Tutorials"
+                navLinkOne="#tutorials"
+                navLabelTwo="Core Concepts"
+                navLinkTwo="#concepts"
+                navLabelThree="Resources"
+                navLinkThree="#resources"
+                ctaLabel="Start Learning"
+                ctaLink="#tutorials"/>
         </root>
     </jcr:content>
 </jcr:root>

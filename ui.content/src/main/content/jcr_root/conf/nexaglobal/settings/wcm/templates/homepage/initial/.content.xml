@@ -20,25 +20,25 @@
                     <hero
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/content/hero"
-                        eyebrow="Enterprise digital platform"
-                        title="Deliver consistent corporate experiences across regions without losing local control."
-                        description="Use this homepage template to introduce the business mission, highlight platform capabilities, and route users into the most important journeys for a region, business unit, or market launch."
-                        primaryCtaLabel="Review platform scope"
-                        primaryCtaLink="#capabilities"
-                        secondaryCtaLabel="Contact the delivery team"
-                        secondaryCtaLink="#contact"
-                        panelLabel="Recommended use"
-                        panelTitle="Corporate homepage or regional landing page"
-                        panelText="Start with business outcomes, trust signals, and primary journeys. Expand later with localization, search, analytics, and campaign-driven content."/>
+                        eyebrow="AEM Learning Hub"
+                        title="Your guide to mastering Adobe Experience Manager."
+                        description="Start your AEM journey here. This homepage template provides a structured layout for organizing tutorials, core concepts, and hands-on learning resources for AEM developers."
+                        primaryCtaLabel="Browse Tutorials"
+                        primaryCtaLink="#tutorials"
+                        secondaryCtaLabel="View Concepts"
+                        secondaryCtaLink="#concepts"
+                        panelLabel="Getting started"
+                        panelTitle="Built on real AEM patterns"
+                        panelText="This template uses custom components, editable templates, Sling Models, and SCSS — the same patterns you will learn about."/>
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/title"
-                        jcr:title="What this page should communicate"
+                        jcr:title="What You Will Learn"
                         type="h2"/>
                     <text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/text"
-                        text="&lt;p id=&quot;capabilities&quot;>Summarize the business proposition in plain language, then direct visitors to the most important programs, services, or regional priorities. A strong enterprise homepage should balance executive messaging, operational trust, and clear calls to action.&lt;/p>&lt;p>Recommended next edits: update the hero to match the owning business unit, replace this section with capability highlights or trust indicators, and connect the footer links to real corporate destinations.&lt;/p>&lt;p id=&quot;contact&quot;>This template is intended to evolve into a regionalized experience backed by governance, analytics, and reusable content models rather than one-off authored pages.&lt;/p>"
+                        text="&lt;p id=&quot;concepts&quot;>Replace this section with an overview of your AEM learning content. Cover topics like &lt;strong>editable templates&lt;/strong>, &lt;strong>custom components with HTL&lt;/strong>, &lt;strong>Sling Models&lt;/strong>, &lt;strong>content architecture&lt;/strong>, and &lt;strong>dispatcher caching&lt;/strong>. Use the card list component below to highlight key topics, and the article list to surface your latest tutorials.&lt;/p>"
                         textIsRich="{Boolean}true"/>
                 </content>
             </main>

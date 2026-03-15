@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
+        pageTitle="Learn AEM - Language Master"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Learn AEM - Canada"
+        jcr:language="en-CA"
+        jcr:description="Canadian language master for the AEM learning hub. Blueprint for regional live copies."
+        cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
+        sling:resourceType="nexaglobal/components/page/homepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/ca/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="Language Master Blueprint"
+                        title="Build enterprise websites with Adobe Experience Manager."
+                        description="This is the Canadian language master for the AEM learning hub. Regional live copies inherit this content structure and can override individual sections for localized learning paths."
+                        primaryCtaLabel="Explore Tutorials"
+                        primaryCtaLink="#tutorials"
+                        secondaryCtaLabel="View Core Concepts"
+                        secondaryCtaLink="#concepts"
+                        panelLabel="Blueprint"
+                        panelTitle="Source for regional rollouts"
+                        panelText="Content authored here flows to regional live copies. Override locally where needed, inherit everywhere else."/>
+                    <concepts_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="Core AEM Concepts"
+                        type="h2"/>
+                    <concepts_text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;concepts&quot;>Adobe Experience Manager (AEM) is built on a powerful open-source stack: &lt;strong>Apache Sling&lt;/strong> for RESTful content resolution, &lt;strong>Apache Jackrabbit Oak&lt;/strong> (JCR) for hierarchical content storage, and &lt;strong>OSGi&lt;/strong> for modular Java services. Understanding this foundation is key to building scalable AEM solutions.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <cardlist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/cardlist"
+                        heading="Essential AEM Building Blocks">
+                        <cards jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" title="Editable Templates" description="Templates define page structure and allowed components. AEM's editable templates let authors control layout policies, initial content, and component permissions." linkLabel="Adobe Docs" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/templates.html"/>
+                            <item1 jcr:primaryType="nt:unstructured" title="Components &amp; HTL" description="Components are the building blocks of AEM pages. Written in HTL (Sightly), they combine server-side rendering with clean separation of markup and logic." linkLabel="Adobe Docs" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html"/>
+                            <item2 jcr:primaryType="nt:unstructured" title="Sling Models" description="Sling Models provide the Java backend for components. They inject JCR properties, traverse content trees, and expose business logic to HTL." linkLabel="Apache Docs" linkUrl="https://sling.apache.org/documentation/bundles/models.html"/>
+                            <item3 jcr:primaryType="nt:unstructured" title="Content Architecture" description="AEM uses a hierarchical content repository (JCR). Pages, assets, and configurations are all resources in a tree resolved by Sling." linkLabel="Adobe Docs" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/architecture.html"/>
+                            <item4 jcr:primaryType="nt:unstructured" title="Core Components" description="Adobe's Core Components are standardized, production-ready WCM components for AEM. They accelerate development, reduce maintenance, and follow accessibility best practices." linkLabel="Adobe Docs" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html"/>
+                            <item5 jcr:primaryType="nt:unstructured" title="Content Fragments" description="Content Fragments let you create structured, channel-neutral content delivered headlessly via GraphQL or embedded in AEM pages for omnichannel strategies." linkLabel="Adobe Docs" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/content-fragments/overview.html"/>
+                            <item6 jcr:primaryType="nt:unstructured" title="Experience Fragments" description="Experience Fragments are reusable groups of components including content and layout. Use them for headers, footers, and promotional sections across multiple pages." linkLabel="Adobe Docs" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/experience-fragments.html"/>
+                            <item7 jcr:primaryType="nt:unstructured" title="Dispatcher Caching" description="The Dispatcher is AEM's caching and load-balancing layer. Proper configuration ensures fast delivery, efficient invalidation, and secure content filtering." linkLabel="Adobe Docs" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html"/>
+                            <item8 jcr:primaryType="nt:unstructured" title="OSGi Configuration" description="AEM runs on an OSGi container where services are modular and configurable. Manage run-mode specific configs for author, publish, and cloud environments." linkLabel="Adobe Docs" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html"/>
+                        </cards>
+                    </cardlist>
+                    <tutorials_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="Hands-On Tutorials"
+                        type="h2"/>
+                    <tutorials_text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;tutorials&quot;>Each tutorial on this site is built as a real AEM page using the same components and patterns you would use in production. Explore the articles below to dive into specific topics.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <articlelist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/articlelist"
+                        heading="Latest Articles"
+                        parentPath="/content/nexaglobal/language-masters/ca"
+                        maxItems="{Long}10"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/ca/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/conf/nexaglobal" mode="replace"/>
-    <filter root="/content/nexaglobal" mode="replace"/>
+    <filter root="/content/nexaglobal" mode="merge"/>
     <filter root="/content/dam/nexaglobal" mode="merge">
         <exclude pattern="/content/dam/nexaglobal(/.*)?"/>
         <include pattern="/content/dam/nexaglobal/jcr:content(/.*)?"/>
     </filter>
     <filter root="/content/dam/nexaglobal/asset.jpg" mode="merge"/>
-    <filter root="/content/experience-fragments/nexaglobal" mode="replace"/>
+    <filter root="/content/experience-fragments/nexaglobal" mode="merge"/>
 </workspaceFilter>

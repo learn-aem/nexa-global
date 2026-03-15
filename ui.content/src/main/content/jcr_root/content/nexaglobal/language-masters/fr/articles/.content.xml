@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
+        pageTitle="Articles"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Articles"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/content-page"
+        sling:resourceType="nexaglobal/components/page/contentpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/header"
+                eyebrow="NexaGlobal"
+                brandTitle="NexaGlobal"
+                tagline="Modèle de référence français pour le déploiement régional"
+                homeLink="/content/nexaglobal/language-masters/fr"
+                navLabelOne="Accueil"
+                navLinkOne="/content/nexaglobal/language-masters/fr.html"
+                navLabelTwo="Articles"
+                navLinkTwo="/content/nexaglobal/language-masters/fr/articles.html"
+                navLabelThree="À propos de moi"
+                navLinkThree="/content/nexaglobal/language-masters/fr/about-me.html"
+                ctaLabel="Discuter sur WhatsApp"
+                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Articles de formation"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h1"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>Cette section contient des articles de formation qui expliquent les concepts AEM dans un format réutilisable par les futurs sites régionaux. Chaque article doit se concentrer sur un sujet, présenter un objectif d'apprentissage clair et proposer des étapes pratiques à suivre.&lt;/p>&lt;p>Commencez par les articles ci-dessous et enrichissez cette section au fur et à mesure que le modèle de référence évolue vers un portail de formation complet.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Articles à la une"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h2"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;ul>&lt;li>&lt;a href=&quot;/content/nexaglobal/language-masters/fr/articles/getting-started-with-aem.html&quot;>Débuter avec AEM Sites&lt;/a> explique le moteur d'exécution, le modèle de page et les concepts de templates que les apprenants doivent comprendre en premier.&lt;/li>&lt;li>&lt;a href=&quot;/content/nexaglobal/language-masters/fr/articles/dispatcher-caching-basics.html&quot;>Les bases du Dispatcher et de la mise en cache&lt;/a> présente la couche de diffusion et l'approche nécessaire pour déboguer les comportements mis en cache et non mis en cache.&lt;/li>&lt;/ul>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/footer"
+                eyebrow="Gouvernance du modèle de référence"
+                title="Utilisez les articles pour enseigner un concept à la fois."
+                text="Gardez chaque article ciblé, réutilisable et suffisamment solide pour survivre à un futur déploiement vers des expériences de formation régionales."
+                linkLabelOne="Accueil"
+                linkUrlOne="/content/nexaglobal/language-masters/fr.html"
+                linkLabelTwo="Articles"
+                linkUrlTwo="/content/nexaglobal/language-masters/fr/articles.html"
+                linkLabelThree="À propos de moi"
+                linkUrlThree="/content/nexaglobal/language-masters/fr/about-me.html"
+                copyright="Copyright NexaGlobal. Modèle de référence de formation en français."/>
+        </root>
+    </jcr:content>
+</jcr:root>

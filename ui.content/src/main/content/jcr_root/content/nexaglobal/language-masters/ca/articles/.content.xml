@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
+        pageTitle="Articles"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Articles"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/content-page"
+        sling:resourceType="nexaglobal/components/page/contentpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/ca/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Learning articles"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h1"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>This section holds authored learning articles that explain AEM concepts in a format future regional sites can reuse. Each article should focus on one topic, show a clear learning objective, and provide practical next steps.&lt;/p>&lt;p>Start with the articles below and expand the section as the blueprint grows into a fuller learning portal.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Featured articles"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h2"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;ul>&lt;li>&lt;a href=&quot;/content/nexaglobal/language-masters/ca/articles/getting-started-with-aem.html&quot;>Getting Started with AEM Sites&lt;/a> explains the core runtime, page model, and template concepts learners should understand first.&lt;/li>&lt;li>&lt;a href=&quot;/content/nexaglobal/language-masters/ca/articles/dispatcher-caching-basics.html&quot;>Dispatcher and Caching Basics&lt;/a> introduces the delivery layer and the mindset needed to debug cached versus uncached behavior.&lt;/li>&lt;/ul>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/ca/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -3,9 +3,10 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
-        pageTitle="NexaGlobal US"
+        pageTitle="Learn AEM - NexaGlobal"
         jcr:primaryType="cq:PageContent"
-        jcr:title="US Homepage"
+        jcr:title="Learn AEM"
+        jcr:description="Your hands-on guide to Adobe Experience Manager. Explore templates, components, Sling Models, content architecture, and AEM as a Cloud Service best practices."
         cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
         sling:resourceType="nexaglobal/components/page/homepage">
         <root
@@ -14,19 +15,8 @@
             layout="responsiveGrid">
             <header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/structure/header"
-                eyebrow="NexaGlobal"
-                brandTitle="NexaGlobal"
-                tagline="US foundation for enterprise AEM delivery"
-                homeLink="/content/nexaglobal/us/en"
-                navLabelOne="Overview"
-                navLinkOne="#overview"
-                navLabelTwo="Capabilities"
-                navLinkTwo="#capabilities"
-                navLabelThree="Contact"
-                navLinkThree="#contact"
-                ctaLabel="Chat on WhatsApp"
-                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/en/site/header/master"/>
             <main
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexaglobal/components/container"
@@ -38,41 +28,139 @@
                     <hero
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/content/hero"
-                        eyebrow="US master rollout"
-                        title="A controlled AEM foundation for multi-region corporate delivery."
-                        description="This first implementation milestone establishes the NexaGlobal homepage shell, reusable structure components, and an authorable content area that later regions can inherit from."
-                        primaryCtaLabel="Review foundation"
-                        primaryCtaLink="#capabilities"
-                        secondaryCtaLabel="Prepare localization"
-                        secondaryCtaLink="#contact"
-                        panelLabel="Current focus"
-                        panelTitle="Foundation branch scope"
-                        panelText="Base page, homepage template, header, footer, and one authored US homepage are now the tracked implementation surface."/>
-                    <title
+                        eyebrow="Welcome to AEM Learning"
+                        title="Build enterprise websites with Adobe Experience Manager."
+                        description="AEM is the industry-leading content management platform used by Fortune 500 companies worldwide. This learning hub walks you through the architecture, components, templates, and best practices you need to build production-grade AEM sites from scratch."
+                        primaryCtaLabel="Explore Tutorials"
+                        primaryCtaLink="#tutorials"
+                        secondaryCtaLabel="View Core Concepts"
+                        secondaryCtaLink="#concepts"
+                        panelLabel="Built with AEM"
+                        panelTitle="This site is a live AEM project"
+                        panelText="Everything you see here runs on a real AEM instance. Custom components, editable templates, Sling Models, and SCSS styling — all following AEMaaCS best practices."/>
+                    <concepts_title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/title"
-                        jcr:title="What this local build proves"
+                        jcr:title="Core AEM Concepts"
                         type="h2"/>
-                    <text
+                    <concepts_text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/text"
-                        text="&lt;p id=&quot;capabilities&quot;>The project now has a dedicated homepage template under &lt;code>/conf/nexaglobal&lt;/code>, custom header/footer/hero components, and a clean US homepage under &lt;code>/content/nexaglobal/us/en&lt;/code>. This is the right base for adding article pages, regional live copies, and search without carrying archetype sample content forward.&lt;/p>&lt;p id=&quot;contact&quot;>Next steps are to add content page and article page templates, introduce structured navigation and language switching, and begin the content fragment and service layer implementation from the NexaGlobal plan.&lt;/p>"
+                        text="&lt;p id=&quot;concepts&quot;>Adobe Experience Manager (AEM) is built on a powerful open-source stack: &lt;strong>Apache Sling&lt;/strong> for RESTful content resolution, &lt;strong>Apache Jackrabbit Oak&lt;/strong> (JCR) for hierarchical content storage, and &lt;strong>OSGi&lt;/strong> for modular Java services. Understanding this foundation is key to building scalable AEM solutions.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <cardlist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/cardlist"
+                        heading="Essential AEM Building Blocks">
+                        <cards jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                title="Editable Templates"
+                                description="Templates define page structure and allowed components. AEM's editable templates let authors control layout policies, initial content, and component permissions — all without developer involvement."
+                                linkLabel="Adobe Docs"
+                                linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/templates.html"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                title="Components &amp; HTL"
+                                description="Components are the building blocks of AEM pages. Written in HTL (Sightly), they combine server-side rendering with a clean separation of markup, logic, and styling using BEM conventions."
+                                linkLabel="Adobe Docs"
+                                linkUrl="https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                title="Sling Models"
+                                description="Sling Models provide the Java backend for components. They inject JCR properties, traverse content trees, and expose business logic to HTL — all with simple annotations and pure Sling APIs."
+                                linkLabel="Apache Docs"
+                                linkUrl="https://sling.apache.org/documentation/bundles/models.html"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                title="Content Architecture"
+                                description="AEM uses a hierarchical content repository (JCR). Pages, assets, configurations, and templates are all resources in a tree structure that Sling resolves via resource types."
+                                linkLabel="Adobe Docs"
+                                linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/architecture.html"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                title="Core Components"
+                                description="Adobe's Core Components are a set of standardized, production-ready WCM components for AEM. They accelerate development, reduce maintenance costs, and follow accessibility best practices out of the box."
+                                linkLabel="Adobe Docs"
+                                linkUrl="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html"/>
+                            <item5
+                                jcr:primaryType="nt:unstructured"
+                                title="Content Fragments"
+                                description="Content Fragments let you create structured, channel-neutral content that can be delivered headlessly via GraphQL or embedded in AEM pages. Ideal for omnichannel content strategies."
+                                linkLabel="Adobe Docs"
+                                linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/content-fragments/overview.html"/>
+                            <item6
+                                jcr:primaryType="nt:unstructured"
+                                title="Experience Fragments"
+                                description="Experience Fragments are reusable groups of components including content and layout. Use them for headers, footers, and promotional sections that appear across multiple pages."
+                                linkLabel="Adobe Docs"
+                                linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/experience-fragments.html"/>
+                            <item7
+                                jcr:primaryType="nt:unstructured"
+                                title="Dispatcher Caching"
+                                description="The Dispatcher is AEM's caching and load-balancing layer. Proper configuration ensures fast page delivery, efficient cache invalidation, and secure content filtering at the edge."
+                                linkLabel="Adobe Docs"
+                                linkUrl="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html"/>
+                            <item8
+                                jcr:primaryType="nt:unstructured"
+                                title="OSGi Configuration"
+                                description="AEM runs on an OSGi container where services are modular and configurable. Manage run-mode specific configs for author, publish, dev, stage, and production environments."
+                                linkLabel="Adobe Docs"
+                                linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html"/>
+                        </cards>
+                    </cardlist>
+                    <tutorials_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="Hands-On Tutorials"
+                        type="h2"/>
+                    <tutorials_text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;tutorials&quot;>Each tutorial on this site is built as a real AEM page using the same components and patterns you would use in production. Explore the articles below to dive into specific topics, from getting started with AEM to advanced dispatcher caching strategies.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <articlelist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/articlelist"
+                        heading="Latest Articles"
+                        parentPath="/content/nexaglobal/us/en"
+                        maxItems="{Long}10"/>
+                    <architecture_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="AEM Project Architecture"
+                        type="h2"/>
+                    <architecture_text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;resources&quot;>A well-structured AEM project follows the &lt;strong>Adobe AEM Project Archetype&lt;/strong> layout with clearly separated modules:&lt;/p>&lt;ul>&lt;li>&lt;strong>core/&lt;/strong> — Java backend: Sling Models, OSGi services, servlets, and workflow steps&lt;/li>&lt;li>&lt;strong>ui.apps/&lt;/strong> — AEM components: HTL templates, dialogs (Coral UI), and client libraries&lt;/li>&lt;li>&lt;strong>ui.content/&lt;/strong> — Content packages: templates, policies, and authored pages&lt;/li>&lt;li>&lt;strong>ui.frontend/&lt;/strong> — Frontend build: SCSS, JavaScript, and Webpack bundling&lt;/li>&lt;li>&lt;strong>ui.config/&lt;/strong> — OSGi configurations for run modes (author, publish, dev, stage, prod)&lt;/li>&lt;li>&lt;strong>dispatcher/&lt;/strong> — Apache/Dispatcher rules for caching, rewrites, and security filters&lt;/li>&lt;/ul>&lt;p>This separation ensures clean deployments, testable code, and a clear boundary between content and application logic.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <bestpractices_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="AEM Best Practices"
+                        type="h2"/>
+                    <bestpractices_text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>Following proven patterns makes your AEM projects maintainable, performant, and ready for AEM as a Cloud Service:&lt;/p>&lt;ul>&lt;li>&lt;strong>Use Core Components&lt;/strong> — Extend Adobe's Core Components instead of building from scratch. They are tested, accessible, and continuously updated.&lt;/li>&lt;li>&lt;strong>Pure Sling APIs&lt;/strong> — Avoid &lt;code>com.day.cq.wcm.api&lt;/code> in Sling Models. Use &lt;code>Resource&lt;/code>, &lt;code>ValueMap&lt;/code>, and &lt;code>ResourceResolver&lt;/code> for SDK compatibility.&lt;/li>&lt;li>&lt;strong>Editable Templates&lt;/strong> — Use editable templates with policies over static templates. They give authors more control and reduce developer bottlenecks.&lt;/li>&lt;li>&lt;strong>Content Fragments &amp; Experience Fragments&lt;/strong> — Model structured content with Content Fragments for omnichannel delivery. Use Experience Fragments for reusable page sections.&lt;/li>&lt;li>&lt;strong>Dispatcher Caching&lt;/strong> — Configure dispatcher rules to cache aggressively, invalidate precisely, and serve stale content during revalidation.&lt;/li>&lt;li>&lt;strong>CI/CD with Cloud Manager&lt;/strong> — Use Cloud Manager pipelines for automated builds, code quality gates, and staged deployments.&lt;/li>&lt;/ul>"
+                        textIsRich="{Boolean}true"/>
+                    <cloudservice_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="AEM as a Cloud Service"
+                        type="h2"/>
+                    <cloudservice_text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>AEM as a Cloud Service (AEMaaCS) is the cloud-native evolution of AEM. It introduces auto-scaling, continuous delivery via Cloud Manager, and a microservices architecture for asset processing. Key differences from AEM 6.5 include:&lt;/p>&lt;ul>&lt;li>&lt;strong>Immutable repository&lt;/strong> — The &lt;code>/apps&lt;/code> and &lt;code>/libs&lt;/code> paths are read-only at runtime. All code deploys through CI/CD pipelines.&lt;/li>&lt;li>&lt;strong>No JMX or CRXDE on prod&lt;/strong> — Debugging relies on logs, Developer Console, and health checks.&lt;/li>&lt;li>&lt;strong>Asset microservices&lt;/strong> — Rendition generation, metadata extraction, and PDF processing are handled by cloud-native workers instead of local AEM workflows.&lt;/li>&lt;li>&lt;strong>Rapid Development Environments (RDE)&lt;/strong> — Lightweight cloud environments for quick iteration without full pipeline deployments.&lt;/li>&lt;/ul>&lt;p>Building with AEMaaCS best practices from day one — as this project does — ensures a smooth path to production.&lt;/p>"
                         textIsRich="{Boolean}true"/>
                 </content>
             </main>
             <footer
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/structure/footer"
-                eyebrow="Platform operations"
-                title="Enterprise governance with regional autonomy."
-                text="The shell is intentionally simple: stable page composition first, then multisite rollout, analytics, workflow, and headless extensions."
-                linkLabelOne="Overview"
-                linkUrlOne="#overview"
-                linkLabelTwo="Capabilities"
-                linkUrlTwo="#capabilities"
-                linkLabelThree="Contact"
-                linkUrlThree="#contact"
-                copyright="Copyright NexaGlobal. Local AEM foundation branch."/>
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/en/site/footer/master"/>
         </root>
     </jcr:content>
 </jcr:root>

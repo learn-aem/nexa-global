@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
+        pageTitle="AEM सीखें - भाषा मास्टर"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="AEM सीखें - हिन्दी"
+        jcr:language="hi"
+        jcr:description="AEM शिक्षण केंद्र के लिए हिन्दी भाषा मास्टर। क्षेत्रीय लाइव कॉपी के लिए ब्लूप्रिंट।"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
+        sling:resourceType="nexaglobal/components/page/homepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/hi/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="भाषा मास्टर ब्लूप्रिंट"
+                        title="Adobe Experience Manager के साथ एंटरप्राइज़ वेबसाइट बनाएँ।"
+                        description="यह AEM शिक्षण केंद्र के लिए हिन्दी भाषा मास्टर है। क्षेत्रीय लाइव कॉपी इस कंटेंट संरचना को इनहेरिट करती हैं और स्थानीयकृत शिक्षण पथों के लिए अलग-अलग खंडों को ओवरराइड कर सकती हैं।"
+                        primaryCtaLabel="ट्यूटोरियल देखें"
+                        primaryCtaLink="#tutorials"
+                        secondaryCtaLabel="मूल अवधारणाएँ देखें"
+                        secondaryCtaLink="#concepts"
+                        panelLabel="ब्लूप्रिंट"
+                        panelTitle="क्षेत्रीय रोलआउट का स्रोत"
+                        panelText="यहाँ लिखी गई सामग्री क्षेत्रीय लाइव कॉपी में प्रवाहित होती है। जहाँ आवश्यक हो वहाँ स्थानीय रूप से ओवरराइड करें, बाकी सब जगह इनहेरिट करें।"/>
+                    <concepts_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="AEM की मूल अवधारणाएँ"
+                        type="h2"/>
+                    <concepts_text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;concepts&quot;>Adobe Experience Manager (AEM) एक शक्तिशाली ओपन-सोर्स स्टैक पर बना है: RESTful कंटेंट रिज़ॉल्यूशन के लिए &lt;strong>Apache Sling&lt;/strong>, श्रेणीबद्ध कंटेंट स्टोरेज के लिए &lt;strong>Apache Jackrabbit Oak&lt;/strong> (JCR), और मॉड्यूलर Java सेवाओं के लिए &lt;strong>OSGi&lt;/strong>। स्केलेबल AEM समाधान बनाने के लिए इस नींव को समझना महत्वपूर्ण है।&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <cardlist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/cardlist"
+                        heading="AEM के आवश्यक बिल्डिंग ब्लॉक्स">
+                        <cards jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured" title="Editable Templates" description="Templates पेज की संरचना और अनुमत कंपोनेंट्स को परिभाषित करते हैं। AEM के Editable Templates लेखकों को लेआउट पॉलिसी, प्रारंभिक सामग्री और कंपोनेंट अनुमतियों को नियंत्रित करने देते हैं।" linkLabel="Adobe दस्तावेज़" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/templates.html"/>
+                            <item1 jcr:primaryType="nt:unstructured" title="Components और HTL" description="Components AEM पेजों के बिल्डिंग ब्लॉक हैं। HTL (Sightly) में लिखे गए, ये सर्वर-साइड रेंडरिंग को मार्कअप और लॉजिक के स्पष्ट पृथक्करण के साथ जोड़ते हैं।" linkLabel="Adobe दस्तावेज़" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html"/>
+                            <item2 jcr:primaryType="nt:unstructured" title="Sling Models" description="Sling Models कंपोनेंट्स के लिए Java बैकएंड प्रदान करते हैं। ये JCR प्रॉपर्टीज़ को इंजेक्ट करते हैं, कंटेंट ट्री को ट्रैवर्स करते हैं, और बिज़नेस लॉजिक को HTL के सामने प्रस्तुत करते हैं।" linkLabel="Apache दस्तावेज़" linkUrl="https://sling.apache.org/documentation/bundles/models.html"/>
+                            <item3 jcr:primaryType="nt:unstructured" title="कंटेंट आर्किटेक्चर" description="AEM एक श्रेणीबद्ध कंटेंट रिपॉज़िटरी (JCR) का उपयोग करता है। पेज, एसेट्स और कॉन्फ़िगरेशन सभी एक ट्री में रिसोर्सेज़ हैं जिन्हें Sling रिज़ॉल्व करता है।" linkLabel="Adobe दस्तावेज़" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/architecture.html"/>
+                            <item4 jcr:primaryType="nt:unstructured" title="Core Components" description="Adobe के Core Components, AEM के लिए मानकीकृत, प्रोडक्शन-रेडी WCM कंपोनेंट्स हैं। ये विकास को गति देते हैं, रखरखाव को कम करते हैं, और एक्सेसिबिलिटी सर्वोत्तम प्रथाओं का पालन करते हैं।" linkLabel="Adobe दस्तावेज़" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html"/>
+                            <item5 jcr:primaryType="nt:unstructured" title="Content Fragments" description="Content Fragments आपको संरचित, चैनल-न्यूट्रल कंटेंट बनाने देते हैं जो GraphQL के माध्यम से हेडलेस रूप से डिलीवर होती है या ऑम्नीचैनल रणनीतियों के लिए AEM पेजों में एम्बेड होती है।" linkLabel="Adobe दस्तावेज़" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/content-fragments/overview.html"/>
+                            <item6 jcr:primaryType="nt:unstructured" title="Experience Fragments" description="Experience Fragments कंटेंट और लेआउट सहित कंपोनेंट्स के पुन: प्रयोज्य समूह हैं। इन्हें हेडर, फ़ुटर और प्रचार अनुभागों के लिए कई पेजों में उपयोग करें।" linkLabel="Adobe दस्तावेज़" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/experience-fragments.html"/>
+                            <item7 jcr:primaryType="nt:unstructured" title="Dispatcher कैशिंग" description="Dispatcher, AEM की कैशिंग और लोड-बैलेंसिंग परत है। उचित कॉन्फ़िगरेशन तेज़ डिलीवरी, कुशल इनवैलिडेशन और सुरक्षित कंटेंट फ़िल्टरिंग सुनिश्चित करता है।" linkLabel="Adobe दस्तावेज़" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html"/>
+                            <item8 jcr:primaryType="nt:unstructured" title="OSGi कॉन्फ़िगरेशन" description="AEM एक OSGi कंटेनर पर चलता है जहाँ सेवाएँ मॉड्यूलर और कॉन्फ़िगर करने योग्य हैं। Author, publish और cloud वातावरणों के लिए रन-मोड विशिष्ट कॉन्फ़िग्स प्रबंधित करें।" linkLabel="Adobe दस्तावेज़" linkUrl="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html"/>
+                        </cards>
+                    </cardlist>
+                    <tutorials_title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="प्रायोगिक ट्यूटोरियल"
+                        type="h2"/>
+                    <tutorials_text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;tutorials&quot;>इस साइट पर प्रत्येक ट्यूटोरियल एक वास्तविक AEM पेज के रूप में बनाया गया है, जिसमें वही कंपोनेंट्स और पैटर्न उपयोग किए गए हैं जो आप प्रोडक्शन में उपयोग करेंगे। विशिष्ट विषयों में गहराई से जाने के लिए नीचे दिए गए लेख देखें।&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <articlelist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/articlelist"
+                        heading="नवीनतम लेख"
+                        parentPath="/content/nexaglobal/language-masters/hi"
+                        maxItems="{Long}10"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/hi/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        pageTitle="Dispatcher and Caching Basics"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Dispatcher and Caching Basics"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/article-page"
+        sling:resourceType="nexaglobal/components/page/articlepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/ca/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="Delivery layer"
+                        title="Dispatcher and caching basics"
+                        description="This article helps learners understand why a page can look different on author, publish, and dispatcher, and how caching changes the debugging workflow."
+                        primaryCtaLabel="Back to articles"
+                        primaryCtaLink="/content/nexaglobal/language-masters/ca/articles.html"
+                        panelLabel="Learning goal"
+                        panelTitle="Separate origin issues from cache issues"
+                        panelText="A learner should be able to decide whether a problem belongs in authored content, publish rendering, or the caching layer."/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>Dispatcher sits in front of AEM publish and caches responses so the platform can serve content quickly and consistently at scale. That means the first thing to ask during debugging is whether the response is coming from AEM or from cache.&lt;/p>&lt;p>For learners, the practical habit is simple: validate the page on author, then publish, then dispatcher. If content is correct on author but stale on publish or dispatcher, the problem is usually activation, invalidation, or a cache rule rather than component logic.&lt;/p>&lt;p>Once this mindset is clear, learners can approach flush rules, filters, headers, and invalidation patterns without treating dispatcher as a black box.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/ca/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

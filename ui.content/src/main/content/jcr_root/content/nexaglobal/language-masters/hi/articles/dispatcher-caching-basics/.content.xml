@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        pageTitle="Dispatcher और कैशिंग की मूल बातें"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Dispatcher और कैशिंग की मूल बातें"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/article-page"
+        sling:resourceType="nexaglobal/components/page/articlepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/hi/site/header/master"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="डिलीवरी परत"
+                        title="Dispatcher और कैशिंग की मूल बातें"
+                        description="यह लेख शिक्षार्थियों को समझने में मदद करता है कि एक पेज author, publish और Dispatcher पर अलग-अलग क्यों दिख सकता है, और कैशिंग डीबगिंग वर्कफ़्लो को कैसे बदलती है।"
+                        primaryCtaLabel="लेखों पर वापस जाएँ"
+                        primaryCtaLink="/content/nexaglobal/language-masters/hi/articles.html"
+                        panelLabel="सीखने का लक्ष्य"
+                        panelTitle="ऑरिजिन समस्याओं को कैश समस्याओं से अलग करें"
+                        panelText="शिक्षार्थी को यह तय करने में सक्षम होना चाहिए कि कोई समस्या लिखित सामग्री में है, publish रेंडरिंग में है, या कैशिंग परत में है।"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>Dispatcher, AEM publish के सामने बैठता है और रिस्पॉन्स को कैश करता है ताकि प्लेटफ़ॉर्म बड़े पैमाने पर कंटेंट को तेज़ी से और लगातार सर्व कर सके। इसका मतलब है कि डीबगिंग के दौरान सबसे पहले यह पूछना चाहिए कि रिस्पॉन्स AEM से आ रहा है या कैश से।&lt;/p>&lt;p>शिक्षार्थियों के लिए, व्यावहारिक आदत सरल है: पहले author पर पेज को सत्यापित करें, फिर publish पर, फिर Dispatcher पर। यदि कंटेंट author पर सही है लेकिन publish या Dispatcher पर पुरानी है, तो समस्या आमतौर पर एक्टिवेशन, इनवैलिडेशन या कैश नियम की होती है, न कि कंपोनेंट लॉजिक की।&lt;/p>&lt;p>एक बार जब यह सोच स्पष्ट हो जाती है, तो शिक्षार्थी flush नियमों, फ़िल्टर्स, हेडर्स और इनवैलिडेशन पैटर्न को Dispatcher को एक ब्लैक बॉक्स मानें बिना समझ सकते हैं।&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/hi/site/footer/master"/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -12,19 +12,8 @@
             layout="responsiveGrid">
             <header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/structure/header"
-                eyebrow="NexaGlobal"
-                brandTitle="NexaGlobal"
-                tagline="AEM foundation for multi-region enterprise delivery"
-                homeLink="/content/nexaglobal/us/en"
-                navLabelOne="Overview"
-                navLinkOne="#overview"
-                navLabelTwo="Capabilities"
-                navLinkTwo="#capabilities"
-                navLabelThree="Contact"
-                navLinkThree="#contact"
-                ctaLabel="Chat on WhatsApp"
-                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/en/site/header/master"/>
             <breadcrumb
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexaglobal/components/breadcrumb"
@@ -42,17 +31,8 @@
             </main>
             <footer
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/structure/footer"
-                eyebrow="Platform operations"
-                title="Keep the enterprise model centralized while regional teams move faster."
-                text="Use this foundation to prove page composition, template governance, and reusable shell components before introducing localization, search, and content fragments."
-                linkLabelOne="Architecture"
-                linkUrlOne="#overview"
-                linkLabelTwo="Capabilities"
-                linkUrlTwo="#capabilities"
-                linkLabelThree="Contact"
-                linkUrlThree="#contact"
-                copyright="Copyright NexaGlobal. Local foundation build for architecture validation."/>
+                sling:resourceType="nexaglobal/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/nexaglobal/language-masters/en/site/footer/master"/>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">

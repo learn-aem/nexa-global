@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:tags="[]"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Pie de página"
+        sling:resourceType="nexaglobal/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="simple">
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/footer"
+                eyebrow="Centro de Aprendizaje AEM"
+                title="Sigue construyendo. Sigue aprendiendo."
+                text="Este sitio es un proyecto de aprendizaje abierto construido con AEM as a Cloud Service. Explora el código fuente, estudia los patrones y úsalo como referencia para tus propios proyectos AEM."
+                linkLabelOne="Tutoriales"
+                linkUrlOne="#tutorials"
+                linkLabelTwo="Conceptos Clave"
+                linkUrlTwo="#concepts"
+                linkLabelThree="Acerca de"
+                linkUrlThree="/content/nexaglobal/language-masters/es/about-me.html"
+                copyright="Aprende AEM por NexaGlobal. Construido con AEM as a Cloud Service."/>
+        </root>
+    </jcr:content>
+</jcr:root>
