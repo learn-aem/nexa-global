@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        pageTitle="Getting Started with AEM"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Getting Started with AEM"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/article-page"
+        sling:resourceType="nexaglobal/components/page/articlepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/header"
+                eyebrow="NexaGlobal"
+                brandTitle="NexaGlobal"
+                tagline="English blueprint for regional rollout"
+                homeLink="/content/nexaglobal/language-masters/en"
+                navLabelOne="Homepage"
+                navLinkOne="/content/nexaglobal/language-masters/en.html"
+                navLabelTwo="Articles"
+                navLinkTwo="/content/nexaglobal/language-masters/en/articles.html"
+                navLabelThree="About Me"
+                navLinkThree="/content/nexaglobal/language-masters/en/about-me.html"
+                ctaLabel="Chat on WhatsApp"
+                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <hero
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="Starter guide"
+                        title="Getting Started with AEM Sites"
+                        description="This article gives new learners a practical first mental model for AEM: author and publish, JCR content, templates, components, and why page structure matters."
+                        primaryCtaLabel="Back to articles"
+                        primaryCtaLink="/content/nexaglobal/language-masters/en/articles.html"
+                        panelLabel="Learning goal"
+                        panelTitle="Understand the building blocks"
+                        panelText="After reading this page, a learner should be able to explain how pages, templates, components, and authored content fit together."/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>AEM Sites is not just a page editor. It is a content platform where page definitions, reusable components, and repository content work together to deliver a consistent site to authors and end users.&lt;/p>&lt;p>Start by understanding the separation of concerns: templates define the reusable page shell, components render individual pieces of content, and authored pages store the actual values authors maintain over time.&lt;/p>&lt;p>When learners understand this model early, topics like editable templates, Sling Models, dialogs, clientlibs, and dispatcher become easier to reason about because each concept has a clear place in the delivery stack.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/footer"
+                eyebrow="Blueprint governance"
+                title="Teach the model before the tooling."
+                text="AEM learners make faster progress when they understand how the repository, templates, and components work together before diving into implementation details."
+                linkLabelOne="Homepage"
+                linkUrlOne="/content/nexaglobal/language-masters/en.html"
+                linkLabelTwo="Articles"
+                linkUrlTwo="/content/nexaglobal/language-masters/en/articles.html"
+                linkLabelThree="About Me"
+                linkUrlThree="/content/nexaglobal/language-masters/en/about-me.html"
+                copyright="Copyright NexaGlobal. English learning blueprint."/>
+        </root>
+    </jcr:content>
+</jcr:root>

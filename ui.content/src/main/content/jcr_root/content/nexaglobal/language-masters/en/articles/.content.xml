@@ -3,11 +3,11 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
-        pageTitle="NexaGlobal Language Master"
+        pageTitle="Articles"
         jcr:primaryType="cq:PageContent"
-        jcr:title="English Master"
-        cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
-        sling:resourceType="nexaglobal/components/page/homepage">
+        jcr:title="Articles"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/content-page"
+        sling:resourceType="nexaglobal/components/page/contentpage">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="nexaglobal/components/container"
@@ -19,10 +19,10 @@
                 brandTitle="NexaGlobal"
                 tagline="English blueprint for regional rollout"
                 homeLink="/content/nexaglobal/language-masters/en"
-                navLabelOne="Overview"
-                navLinkOne="#overview"
-                navLabelTwo="Capabilities"
-                navLinkTwo="#capabilities"
+                navLabelOne="Homepage"
+                navLinkOne="/content/nexaglobal/language-masters/en.html"
+                navLabelTwo="Articles"
+                navLinkTwo="/content/nexaglobal/language-masters/en/articles.html"
                 navLabelThree="About Me"
                 navLinkThree="/content/nexaglobal/language-masters/en/about-me.html"
                 ctaLabel="Chat on WhatsApp"
@@ -35,28 +35,25 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="nexaglobal/components/container"
                     layout="responsiveGrid">
-                    <hero
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="nexaglobal/components/content/hero"
-                        eyebrow="Language master"
-                        title="Blueprint content for future live copies."
-                        description="This master page mirrors the foundation homepage structure so regional rollouts can later align on a common shell before local overrides are introduced."
-                        primaryCtaLabel="Inspect structure"
-                        primaryCtaLink="#capabilities"
-                        secondaryCtaLabel="Plan rollout"
-                        secondaryCtaLink="#contact"
-                        panelLabel="Blueprint state"
-                        panelTitle="Ready for MSM later"
-                        panelText="Live copy setup is intentionally deferred until the first page template and content model are stable."/>
                     <title
                         jcr:primaryType="nt:unstructured"
+                        jcr:title="Learning articles"
                         sling:resourceType="nexaglobal/components/title"
-                        jcr:title="Why the blueprint comes first"
+                        type="h1"/>
+                    <text
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>This section holds authored learning articles that explain AEM concepts in a format future regional sites can reuse. Each article should focus on one topic, show a clear learning objective, and provide practical next steps.&lt;/p>&lt;p>Start with the articles below and expand the section as the blueprint grows into a fuller learning portal.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Featured articles"
+                        sling:resourceType="nexaglobal/components/title"
                         type="h2"/>
                     <text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nexaglobal/components/text"
-                        text="&lt;p id=&quot;capabilities&quot;>The English language master now shares the same foundation components as the US homepage. This prevents the project from mixing final implementation work with archetype placeholders.&lt;/p>"
+                        text="&lt;ul>&lt;li>&lt;a href=&quot;/content/nexaglobal/language-masters/en/articles/getting-started-with-aem.html&quot;>Getting Started with AEM Sites&lt;/a> explains the core runtime, page model, and template concepts learners should understand first.&lt;/li>&lt;li>&lt;a href=&quot;/content/nexaglobal/language-masters/en/articles/dispatcher-caching-basics.html&quot;>Dispatcher and Caching Basics&lt;/a> introduces the delivery layer and the mindset needed to debug cached versus uncached behavior.&lt;/li>&lt;/ul>"
                         textIsRich="{Boolean}true"/>
                 </content>
             </main>
@@ -64,15 +61,15 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexaglobal/components/structure/footer"
                 eyebrow="Blueprint governance"
-                title="Stabilize the shell before enabling inheritance."
-                text="Once content pages and article pages exist, this master structure can back regional live copies cleanly."
-                linkLabelOne="Overview"
-                linkUrlOne="#overview"
-                linkLabelTwo="Capabilities"
-                linkUrlTwo="#capabilities"
+                title="Use articles to teach one concept at a time."
+                text="Keep each article focused, reusable, and strong enough to survive future rollout into regional learning experiences."
+                linkLabelOne="Homepage"
+                linkUrlOne="/content/nexaglobal/language-masters/en.html"
+                linkLabelTwo="Articles"
+                linkUrlTwo="/content/nexaglobal/language-masters/en/articles.html"
                 linkLabelThree="About Me"
                 linkUrlThree="/content/nexaglobal/language-masters/en/about-me.html"
-                copyright="Copyright NexaGlobal. English blueprint foundation."/>
+                copyright="Copyright NexaGlobal. English learning blueprint."/>
         </root>
     </jcr:content>
 </jcr:root>

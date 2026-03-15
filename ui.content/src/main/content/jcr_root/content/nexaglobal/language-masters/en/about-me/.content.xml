@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
+        pageTitle="About Me"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="About Me"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/content-page"
+        sling:resourceType="nexaglobal/components/page/contentpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nexaglobal/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/header"
+                eyebrow="NexaGlobal"
+                brandTitle="NexaGlobal"
+                tagline="English blueprint for regional rollout"
+                homeLink="/content/nexaglobal/language-masters/en"
+                navLabelOne="Homepage"
+                navLinkOne="/content/nexaglobal/language-masters/en.html"
+                navLabelTwo="Articles"
+                navLinkTwo="/content/nexaglobal/language-masters/en/articles.html"
+                navLabelThree="About Me"
+                navLinkThree="/content/nexaglobal/language-masters/en/about-me.html"
+                ctaLabel="Chat on WhatsApp"
+                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nexaglobal/components/container"
+                    layout="responsiveGrid">
+                    <titleIntro
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="About Hemanth Chowdary Para"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h1"/>
+                    <textIntro
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>I am an AEM Developer based in Hyderabad with 4+ years of hands-on experience building and supporting enterprise-scale web platforms on AEM 6.5 and AEM as a Cloud Service. My work is focused on backend-heavy AEM delivery, including Sling Models, OSGi services, Servlets, Sling Schedulers, Groovy-based content operations, and REST API integrations.&lt;/p>&lt;p>I have contributed to enterprise programs for LSEG, Royal Caribbean, Agilent Technologies, and other large-scale digital platforms where reliability, production support, and maintainable backend design are critical.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <titleSkills
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Core AEM expertise"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h2"/>
+                    <textSkills
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>My core AEM skill set includes AEM 6.5, AEM as a Cloud Service, AEM components, editable templates, HTL, Sling Models, Sling Servlets, OSGi, JCR/CRX, Content Fragments, Experience Fragments, DAM, Dynamic Media, AEM Cloud Manager, and user and group management.&lt;/p>&lt;p>Beyond AEM, I work with Java, Groovy, HTML, CSS, JavaScript, Maven, Git, GitHub, Jenkins, DXone, SonarQube, IntelliJ IDEA, Postman, Jira, and Confluence. My delivery model is aligned with Agile teams and supported by JUnit and AEM Mocks for testing.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                    <titleExperience
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Experience highlights"
+                        sling:resourceType="nexaglobal/components/title"
+                        type="h2"/>
+                    <textExperience
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p>At Deloitte, I have supported Agilent Technologies and Royal Caribbean across AEM 6.5 and AEMaaCS environments, handling production support, deployments, incident resolution, RCA, Sling Models, OSGi configurations, Servlets, DAM troubleshooting, cloud manager release flows, Dynamic Media migration, and multi-language content enablement.&lt;/p>&lt;p>Before Deloitte, I worked at Tata Consultancy Services on the London Stock Exchange Group platform, where I built custom Sling Servlets, Sling Models, OSGi services, Groovy scripts for bulk JCR operations, JUnit coverage with AEM Mocks, and API validation workflows using Postman. I also supported authoring consistency, deployment pipelines, and production issue analysis using AEM logs.&lt;/p>&lt;p>My background is supported by a Bachelor of Technology degree, Adobe Experience Manager Sites Developer Professional certification (AD0-E123), and recognition for technical excellence and team collaboration on critical releases.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/footer"
+                eyebrow="Blueprint governance"
+                title="Stabilize the shell before enabling inheritance."
+                text="Use the language master as the source of truth for reusable learning content and roll out to regional sites only after patterns are validated."
+                linkLabelOne="Homepage"
+                linkUrlOne="/content/nexaglobal/language-masters/en.html"
+                linkLabelTwo="Articles"
+                linkUrlTwo="/content/nexaglobal/language-masters/en/articles.html"
+                linkLabelThree="About Me"
+                linkUrlThree="/content/nexaglobal/language-masters/en/about-me.html"
+                copyright="Copyright NexaGlobal. English learning blueprint."/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -25,8 +25,8 @@
                 navLinkTwo="#capabilities"
                 navLabelThree="Contact"
                 navLinkThree="#contact"
-                ctaLabel="Request demo"
-                ctaLink="#contact"/>
+                ctaLabel="Chat on WhatsApp"
+                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
             <main
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="nexaglobal/components/container"
