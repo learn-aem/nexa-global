@@ -21,7 +21,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-import com.day.cq.wcm.api.Page;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
 import com.nexaglobal.core.testcontext.AppAemContext;
@@ -39,15 +38,18 @@ class HelloWorldModelTest {
 
     private HelloWorldModel hello;
 
-    private Page page;
+    private Resource pageResource;
     private Resource resource;
 
     @BeforeEach
     public void setup() throws Exception {
 
         // prepare a page with a test resource
-        page = context.create().page("/content/mypage");
-        resource = context.create().resource(page, "hello",
+        pageResource = context.create().resource("/content/mypage",
+            "jcr:primaryType", "cq:Page");
+        context.create().resource("/content/mypage/jcr:content",
+            "jcr:primaryType", "cq:PageContent");
+        resource = context.create().resource("/content/mypage/jcr:content/hello",
             "sling:resourceType", "nexaglobal/components/helloworld");
 
         // create sling model
@@ -60,7 +62,7 @@ class HelloWorldModelTest {
         String msg = hello.getMessage();
         assertNotNull(msg);
         assertTrue(StringUtils.contains(msg, resource.getResourceType()));
-        assertTrue(StringUtils.contains(msg, page.getPath()));
+        assertTrue(StringUtils.contains(msg, "/content/mypage"));
     }
 
 }
