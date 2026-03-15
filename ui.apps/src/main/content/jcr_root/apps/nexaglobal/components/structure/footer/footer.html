@@ -1,0 +1,23 @@
+<sly
+    data-sly-set.footerTitle="${properties.title ? properties.title : 'Enterprise rollout with local control'}"
+    data-sly-set.linkUrlOne="${properties.linkUrlOne ? properties.linkUrlOne : '#overview'}"
+    data-sly-set.linkUrlTwo="${properties.linkUrlTwo ? properties.linkUrlTwo : '#capabilities'}"
+    data-sly-set.linkUrlThree="${properties.linkUrlThree ? properties.linkUrlThree : '#contact'}"
+    data-sly-set.copyright="${properties.copyright ? properties.copyright : 'Copyright NexaGlobal. Internal foundation build.'}"/>
+<footer class="nexa-footer" id="contact">
+    <div class="nexa-shell nexa-footer__inner">
+        <div class="nexa-footer__summary">
+            <p class="nexa-footer__eyebrow" data-sly-test="${properties.eyebrow}">${properties.eyebrow}</p>
+            <h2 class="nexa-footer__title">${footerTitle}</h2>
+            <p class="nexa-footer__text" data-sly-test="${properties.text}">${properties.text}</p>
+        </div>
+        <div class="nexa-footer__links">
+            <a class="nexa-footer__link" data-sly-test="${properties.linkLabelOne}" href="${linkUrlOne}">${properties.linkLabelOne}</a>
+            <a class="nexa-footer__link" data-sly-test="${properties.linkLabelTwo}" href="${linkUrlTwo}">${properties.linkLabelTwo}</a>
+            <a class="nexa-footer__link" data-sly-test="${properties.linkLabelThree}" href="${linkUrlThree}">${properties.linkLabelThree}</a>
+        </div>
+    </div>
+    <div class="nexa-shell nexa-footer__meta">
+        <p class="nexa-footer__copyright">${copyright}</p>
+    </div>
+</footer>

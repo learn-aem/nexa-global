@@ -2,82 +2,77 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        pageTitle="NexaGlobal"
+        cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
+        pageTitle="NexaGlobal Language Master"
         jcr:primaryType="cq:PageContent"
-        jcr:title="en"
-        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
-        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:template="/conf/nexaglobal/settings/wcm/templates/page-content"
-        sling:resourceType="nexaglobal/components/page"
-    >
+        jcr:title="English Master"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
+        sling:resourceType="nexaglobal/components/page/homepage">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="nexaglobal/components/container"
             layout="responsiveGrid">
-            <container
+            <header
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="nexaglobal/components/container">
-                <title
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="nexaglobal/components/title"/>
-                <container
+                sling:resourceType="nexaglobal/components/structure/header"
+                eyebrow="NexaGlobal"
+                brandTitle="NexaGlobal"
+                tagline="English blueprint for regional rollout"
+                homeLink="/content/nexaglobal/language-masters/en"
+                navLabelOne="Overview"
+                navLinkOne="#overview"
+                navLabelTwo="Capabilities"
+                navLinkTwo="#capabilities"
+                navLabelThree="Contact"
+                navLinkThree="#contact"
+                ctaLabel="Review blueprint"
+                ctaLink="#contact"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="nexaglobal/components/container"
                     layout="responsiveGrid">
-                    <teaser
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                    <hero
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="nexaglobal/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser>
-                    <teaser_copy
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="Language master"
+                        title="Blueprint content for future live copies."
+                        description="This master page mirrors the foundation homepage structure so regional rollouts can later align on a common shell before local overrides are introduced."
+                        primaryCtaLabel="Inspect structure"
+                        primaryCtaLink="#capabilities"
+                        secondaryCtaLabel="Plan rollout"
+                        secondaryCtaLink="#contact"
+                        panelLabel="Blueprint state"
+                        panelTitle="Ready for MSM later"
+                        panelText="Live copy setup is intentionally deferred until the first page template and content model are stable."/>
+                    <title
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="nexaglobal/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser_copy>
-                    <teaser_copy_1579324932
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="Why the blueprint comes first"
+                        type="h2"/>
+                    <text
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="nexaglobal/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser_copy_1579324932>
-                    <helloworld
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="nexaglobal/components/helloworld"
-                        text="lalala :)"/>
-                </container>
-            </container>
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;capabilities&quot;>The English language master now shares the same foundation components as the US homepage. This prevents the project from mixing final implementation work with archetype placeholders.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/footer"
+                eyebrow="Blueprint governance"
+                title="Stabilize the shell before enabling inheritance."
+                text="Once content pages and article pages exist, this master structure can back regional live copies cleanly."
+                linkLabelOne="Overview"
+                linkUrlOne="#overview"
+                linkLabelTwo="Capabilities"
+                linkUrlTwo="#capabilities"
+                linkLabelThree="Contact"
+                linkUrlThree="#contact"
+                copyright="Copyright NexaGlobal. English blueprint foundation."/>
         </root>
     </jcr:content>
 </jcr:root>

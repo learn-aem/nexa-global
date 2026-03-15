@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:templateType="/conf/nexaglobal/settings/wcm/template-types/page"
+        jcr:description="General content page template for regional and corporate pages."
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Content Page"
+        ranking="{Long}90"
+        status="enabled"/>
+</jcr:root>

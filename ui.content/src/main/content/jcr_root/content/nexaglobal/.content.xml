@@ -5,13 +5,13 @@
         cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
         cq:conf="/conf/nexaglobal"
         cq:redirectTarget="/content/nexaglobal/us/en"
-        cq:template="/conf/nexaglobal/settings/wcm/templates/page-content"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
         jcr:primaryType="cq:PageContent"
         jcr:title="NexaGlobal"
         sling:configRef="/conf/nexaglobal"
         sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"
-        sling:resourceType="nexaglobal/components/page">
+        sling:resourceType="nexaglobal/components/page/basepage">
         <image jcr:primaryType="nt:unstructured">
             <file/>
         </image>
