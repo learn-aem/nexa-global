@@ -2,90 +2,77 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        jcr:mixinTypes="[cq:LiveRelationship]"
-        pageTitle="NexaGlobal"
+        cq:allowedTemplates="[/conf/nexaglobal/settings/wcm/templates/(?!xf-).*]"
+        pageTitle="NexaGlobal US"
         jcr:primaryType="cq:PageContent"
-        jcr:title="en"
-        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
-        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:template="/conf/nexaglobal/settings/wcm/templates/page-content"
-        sling:resourceType="nexaglobal/components/page"
-    >
+        jcr:title="US Homepage"
+        cq:template="/conf/nexaglobal/settings/wcm/templates/homepage"
+        sling:resourceType="nexaglobal/components/page/homepage">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="nexaglobal/components/container"
-             jcr:mixinTypes="[cq:LiveRelationship]"
             layout="responsiveGrid">
-            <container
+            <header
                 jcr:primaryType="nt:unstructured"
-             jcr:mixinTypes="[cq:LiveRelationship]"
-                sling:resourceType="nexaglobal/components/container">
-                <title
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="nexaglobal/components/title"/>
-                <container
+                sling:resourceType="nexaglobal/components/structure/header"
+                eyebrow="NexaGlobal"
+                brandTitle="NexaGlobal"
+                tagline="US foundation for enterprise AEM delivery"
+                homeLink="/content/nexaglobal/us/en"
+                navLabelOne="Overview"
+                navLinkOne="#overview"
+                navLabelTwo="Capabilities"
+                navLinkTwo="#capabilities"
+                navLabelThree="Contact"
+                navLinkThree="#contact"
+                ctaLabel="Chat on WhatsApp"
+                ctaLink="https://wa.me/919390297440?text=Hi%20I%20want%20to%20know%20more%20about%20AEM"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/container"
+                layout="responsiveGrid">
+                <content
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="nexaglobal/components/container"
                     layout="responsiveGrid">
-                    <teaser
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                    <hero
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="nexaglobal/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser>
-                    <teaser_copy
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        sling:resourceType="nexaglobal/components/content/hero"
+                        eyebrow="US master rollout"
+                        title="A controlled AEM foundation for multi-region corporate delivery."
+                        description="This first implementation milestone establishes the NexaGlobal homepage shell, reusable structure components, and an authorable content area that later regions can inherit from."
+                        primaryCtaLabel="Review foundation"
+                        primaryCtaLink="#capabilities"
+                        secondaryCtaLabel="Prepare localization"
+                        secondaryCtaLink="#contact"
+                        panelLabel="Current focus"
+                        panelTitle="Foundation branch scope"
+                        panelText="Base page, homepage template, header, footer, and one authored US homepage are now the tracked implementation surface."/>
+                    <title
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="nexaglobal/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser_copy>
-                    <teaser_copy_1579324932
-                        jcr:description="&lt;p>Don't stop half way, go for the top!&lt;/p>&#xd;&#xa;"
+                        sling:resourceType="nexaglobal/components/title"
+                        jcr:title="What this local build proves"
+                        type="h2"/>
+                    <text
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Epic Journey"
-                        sling:resourceType="nexaglobal/components/teaser"
-                        actionsEnabled="false"
-                        descriptionFromPage="false"
-                        textIsRich="true"
-                        titleFromPage="false">
-                        <cq:responsive jcr:primaryType="nt:unstructured">
-                            <default
-                                jcr:primaryType="nt:unstructured"
-                                offset="0"
-                                width="4"/>
-                        </cq:responsive>
-                    </teaser_copy_1579324932>
-                    <helloworld
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="nexaglobal/components/helloworld"
-                        text="lalala :)"/>
-                </container>
-            </container>
+                        sling:resourceType="nexaglobal/components/text"
+                        text="&lt;p id=&quot;capabilities&quot;>The project now has a dedicated homepage template under &lt;code>/conf/nexaglobal&lt;/code>, custom header/footer/hero components, and a clean US homepage under &lt;code>/content/nexaglobal/us/en&lt;/code>. This is the right base for adding article pages, regional live copies, and search without carrying archetype sample content forward.&lt;/p>&lt;p id=&quot;contact&quot;>Next steps are to add content page and article page templates, introduce structured navigation and language switching, and begin the content fragment and service layer implementation from the NexaGlobal plan.&lt;/p>"
+                        textIsRich="{Boolean}true"/>
+                </content>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nexaglobal/components/structure/footer"
+                eyebrow="Platform operations"
+                title="Enterprise governance with regional autonomy."
+                text="The shell is intentionally simple: stable page composition first, then multisite rollout, analytics, workflow, and headless extensions."
+                linkLabelOne="Overview"
+                linkUrlOne="#overview"
+                linkLabelTwo="Capabilities"
+                linkUrlTwo="#capabilities"
+                linkLabelThree="Contact"
+                linkUrlThree="#contact"
+                copyright="Copyright NexaGlobal. Local AEM foundation branch."/>
         </root>
-        <cq:LiveSyncConfig
-            cq:isDeep="{Boolean}true"
-            cq:master="/content/nexaglobal/language-masters/en"
-            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
-            jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
 </jcr:root>

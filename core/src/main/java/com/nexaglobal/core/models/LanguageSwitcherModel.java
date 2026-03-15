@@ -3,19 +3,16 @@ package com.nexaglobal.core.models;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Locale;
 
 import javax.annotation.PostConstruct;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
-
-import com.day.cq.wcm.api.Page;
-import com.day.cq.wcm.api.PageManager;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class LanguageSwitcherModel {
@@ -37,24 +34,19 @@ public class LanguageSwitcherModel {
         languages = new ArrayList<>();
         currentLanguage = "EN";
 
-        PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
-        if (pageManager == null) {
+        // Find the current page path by walking up from component resource
+        String resourcePath = resource.getPath();
+        String currentPagePath = extractPagePath(resourcePath);
+        if (currentPagePath == null) {
             return;
         }
 
-        Page currentPage = pageManager.getContainingPage(resource);
-        if (currentPage == null) {
-            return;
-        }
-
-        // Determine site root - use configured or detect from current page
+        // Determine site root
         String root = siteRoot;
         if (root == null || root.isEmpty()) {
-            // Try to detect: /content/nexaglobal is the site root
-            String pagePath = currentPage.getPath();
-            String[] segments = pagePath.split("/");
+            String[] segments = currentPagePath.split("/");
             if (segments.length >= 3) {
-                root = "/" + segments[1] + "/" + segments[2]; // /content/nexaglobal
+                root = "/" + segments[1] + "/" + segments[2];
             }
         }
 
@@ -62,29 +54,38 @@ public class LanguageSwitcherModel {
             return;
         }
 
-        Page rootPage = pageManager.getPage(root);
-        if (rootPage == null) {
+        Resource rootResource = resourceResolver.getResource(root);
+        if (rootResource == null) {
             return;
         }
 
-        // Get current page's relative path from its language root
-        String currentPath = currentPage.getPath();
-        String currentLangRoot = findLanguageRoot(currentPath, root);
+        // Find current language root: /content/nexaglobal/us/en
+        String currentLangRoot = findLanguageRoot(currentPagePath, root);
 
-        // Iterate over region/language children
-        for (Page regionPage : (Iterable<Page>) () -> rootPage.listChildren()) {
-            for (Page langPage : (Iterable<Page>) () -> regionPage.listChildren()) {
-                Locale locale = langPage.getLanguage(false);
-                String langTitle = locale != null ? locale.getDisplayLanguage(Locale.ENGLISH) : langPage.getTitle();
-                String langCode = langPage.getName().toUpperCase();
-                boolean isActive = currentPath.startsWith(langPage.getPath());
+        // Iterate region > language children
+        for (Resource regionResource : rootResource.getChildren()) {
+            Resource regionJcr = regionResource.getChild("jcr:content");
+            if (regionJcr == null) {
+                continue;
+            }
+
+            for (Resource langResource : regionResource.getChildren()) {
+                Resource langJcr = langResource.getChild("jcr:content");
+                if (langJcr == null) {
+                    continue;
+                }
+
+                ValueMap langProps = langJcr.getValueMap();
+                String langTitle = langProps.get("jcr:title", langResource.getName());
+                String langCode = langResource.getName().toUpperCase();
+                boolean isActive = currentPagePath.startsWith(langResource.getPath());
 
                 // Build equivalent page path in this language
-                String targetPath = langPage.getPath();
-                if (currentLangRoot != null) {
-                    String relativePath = currentPath.substring(currentLangRoot.length());
-                    String candidatePath = langPage.getPath() + relativePath;
-                    if (pageManager.getPage(candidatePath) != null) {
+                String targetPath = langResource.getPath();
+                if (currentLangRoot != null && currentPagePath.length() > currentLangRoot.length()) {
+                    String relativePath = currentPagePath.substring(currentLangRoot.length());
+                    String candidatePath = langResource.getPath() + relativePath;
+                    if (resourceResolver.getResource(candidatePath) != null) {
                         targetPath = candidatePath;
                     }
                 }
@@ -97,12 +98,21 @@ public class LanguageSwitcherModel {
         }
     }
 
-    private String findLanguageRoot(String pagePath, String siteRoot) {
-        // Language root is typically 2 levels below site root: /content/nexaglobal/us/en
-        PageManager pm = resourceResolver.adaptTo(PageManager.class);
-        String[] segments = pagePath.substring(siteRoot.length()).split("/");
-        if (segments.length >= 3 && pm != null) {
-            return siteRoot + "/" + segments[1] + "/" + segments[2];
+    private String extractPagePath(String resourcePath) {
+        // Walk up from resource path to find the cq:Page (has jcr:content child)
+        int jcrContentIdx = resourcePath.indexOf("/jcr:content");
+        if (jcrContentIdx > 0) {
+            return resourcePath.substring(0, jcrContentIdx);
+        }
+        return null;
+    }
+
+    private String findLanguageRoot(String pagePath, String root) {
+        String relative = pagePath.substring(root.length());
+        String[] segments = relative.split("/");
+        // segments[0] = "", segments[1] = region, segments[2] = language
+        if (segments.length >= 3) {
+            return root + "/" + segments[1] + "/" + segments[2];
         }
         return null;
     }

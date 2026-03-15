@@ -10,14 +10,12 @@ import javax.annotation.PostConstruct;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
-
-import com.day.cq.wcm.api.Page;
-import com.day.cq.wcm.api.PageManager;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ArticleListModel {
@@ -41,26 +39,32 @@ public class ArticleListModel {
             return;
         }
 
-        PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
-        if (pageManager == null) {
-            return;
-        }
-
-        Page parentPage = pageManager.getPage(parentPath);
-        if (parentPage == null) {
+        Resource parentResource = resourceResolver.getResource(parentPath);
+        if (parentResource == null) {
             return;
         }
 
         int count = 0;
-        for (Page child : (Iterable<Page>) () -> parentPage.listChildren()) {
+        for (Resource child : parentResource.getChildren()) {
             if (count >= maxItems) {
                 break;
             }
-            String title = child.getTitle() != null ? child.getTitle() : child.getName();
-            String description = child.getDescription();
+            // Only include cq:Page nodes
+            Resource jcrContent = child.getChild("jcr:content");
+            if (jcrContent == null) {
+                continue;
+            }
+
+            ValueMap props = jcrContent.getValueMap();
+            String title = props.get("jcr:title", child.getName());
+            String description = props.get("jcr:description", String.class);
             String path = child.getPath();
-            String lastModified = formatDate(child.getLastModified());
-            articles.add(new Article(title, description, path, lastModified));
+            Calendar lastMod = props.get("cq:lastModified", Calendar.class);
+            if (lastMod == null) {
+                lastMod = props.get("jcr:lastModified", Calendar.class);
+            }
+
+            articles.add(new Article(title, description, path, formatDate(lastMod)));
             count++;
         }
     }
