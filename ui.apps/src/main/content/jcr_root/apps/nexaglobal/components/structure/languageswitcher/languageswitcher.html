@@ -1,0 +1,16 @@
+<sly data-sly-use.model="com.nexaglobal.core.models.LanguageSwitcherModel"/>
+<div class="nexa-langswitcher" data-sly-test="${model.languages && model.languages.size > 1}">
+    <button class="nexa-langswitcher__toggle" aria-expanded="false" aria-label="Select language">
+        <span class="nexa-langswitcher__current">${model.currentLanguage}</span>
+        <svg class="nexa-langswitcher__icon" width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
+            <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" fill="none"/>
+        </svg>
+    </button>
+    <ul class="nexa-langswitcher__list" role="listbox">
+        <li class="nexa-langswitcher__item${lang.active ? ' nexa-langswitcher__item--active' : ''}"
+            data-sly-list.lang="${model.languages}" role="option">
+            <a class="nexa-langswitcher__link" href="${lang.path @ extension='html'}"
+               aria-selected="${lang.active}">${lang.title}</a>
+        </li>
+    </ul>
+</div>

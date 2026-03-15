@@ -1,0 +1,75 @@
+.nexa-langswitcher {
+    position: relative;
+    display: inline-block;
+}
+
+.nexa-langswitcher__toggle {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 0.85rem;
+    font-weight: 600;
+    gap: 0.4rem;
+    letter-spacing: 0.05em;
+    padding: 0.45rem 0.75rem;
+    transition: background 0.2s;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.18);
+    }
+}
+
+.nexa-langswitcher__icon {
+    transition: transform 0.2s;
+}
+
+.nexa-langswitcher__list {
+    background: #fff;
+    border: 1px solid #e8ecf1;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(17, 42, 66, 0.12);
+    display: none;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    min-width: 140px;
+    padding: 0.4rem;
+    position: absolute;
+    top: calc(100% + 6px);
+    z-index: 100;
+}
+
+.nexa-langswitcher:hover .nexa-langswitcher__list,
+.nexa-langswitcher:focus-within .nexa-langswitcher__list {
+    display: block;
+}
+
+.nexa-langswitcher:hover .nexa-langswitcher__icon {
+    transform: rotate(180deg);
+}
+
+.nexa-langswitcher__item {
+    border-radius: 6px;
+}
+
+.nexa-langswitcher__item--active {
+    background: rgba(17, 42, 66, 0.05);
+}
+
+.nexa-langswitcher__link {
+    border-radius: 6px;
+    color: #112a42;
+    display: block;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    transition: background 0.15s;
+
+    &:hover {
+        background: rgba(17, 42, 66, 0.06);
+    }
+}
